@@ -1,5 +1,6 @@
 'use client'
 
+import { PageContainer } from '@/components/page-container'
 import { ScrollReveal } from '@/components/scroll-reveal'
 import { StaggeredGrid } from '@/components/staggered-grid'
 import { ProfessionalFeatureCard } from '@/components/professional-feature-card'
@@ -60,7 +61,7 @@ export default function ForStaff() {
   }))
 
   return (
-    <main className="min-h-screen">
+    <PageContainer className="!px-0 !py-0 min-h-screen">
       {/* Centered Hero with Background */}
       <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white overflow-hidden py-24 lg:py-32">
         {/* Background Pattern */}
@@ -231,6 +232,6 @@ export default function ForStaff() {
         }}
         variant="accent"
       />
-    </main>
+    </PageContainer>
   )
 }

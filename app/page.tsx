@@ -1,5 +1,6 @@
 'use client'
 
+import { PageContainer } from '@/components/page-container'
 import { AsymmetricHero } from '@/components/asymmetric-hero'
 import { AlternatingFeatureSection } from '@/components/alternating-feature-section'
 import { StatsDarkSection } from '@/components/stats-dark-section'
@@ -62,7 +63,7 @@ export default function Home() {
   ]
 
   return (
-    <main className="min-h-screen">
+    <PageContainer className="!px-0 !py-0 min-h-screen">
       {/* Asymmetric Hero */}
       <AsymmetricHero
         title="Permanent Recruitment Solutions for Education"
@@ -138,6 +139,6 @@ export default function Home() {
           href: '/how-it-works',
         }}
       />
-    </main>
+    </PageContainer>
   )
 }

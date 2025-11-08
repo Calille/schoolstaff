@@ -17,10 +17,16 @@ interface PageContainerProps {
  * @param className - Additional CSS classes
  */
 export function PageContainer({ children, className = '' }: PageContainerProps) {
+  // If className includes !px-0 or !py-0, remove container constraints for full-width layouts
+  const isFullWidth = className.includes('!px-0') || className.includes('!py-0')
+  const mainClasses = isFullWidth 
+    ? `flex-1 ${className}` 
+    : `container mx-auto px-4 py-12 flex-1 ${className}`
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className={`container mx-auto px-4 py-12 flex-1 ${className}`}>
+      <main className={mainClasses}>
         {children}
       </main>
       <Footer />

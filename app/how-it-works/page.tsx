@@ -1,5 +1,6 @@
 'use client'
 
+import { PageContainer } from '@/components/page-container'
 import { ScrollReveal } from '@/components/scroll-reveal'
 import { ProfessionalProcess } from '@/components/professional-process'
 import { ProfessionalCTASection } from '@/components/professional-cta-section'
@@ -88,7 +89,7 @@ export default function HowItWorks() {
   ]
 
   return (
-    <main className="min-h-screen">
+    <PageContainer className="!px-0 !py-0 min-h-screen">
       {/* Simple Centered Hero */}
       <section className="bg-gradient-to-b from-primary-50 to-white py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -413,6 +414,6 @@ export default function HowItWorks() {
         }}
         variant="primary"
       />
-    </main>
+    </PageContainer>
   )
 }

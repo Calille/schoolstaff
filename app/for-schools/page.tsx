@@ -1,5 +1,6 @@
 'use client'
 
+import { PageContainer } from '@/components/page-container'
 import { AsymmetricHero } from '@/components/asymmetric-hero'
 import { BentoGridFeatures } from '@/components/bento-grid-features'
 import { ProfessionalProcess } from '@/components/professional-process'
@@ -84,7 +85,7 @@ export default function ForSchools() {
   ]
 
   return (
-    <main className="min-h-screen">
+    <PageContainer className="!px-0 !py-0 min-h-screen">
       {/* Asymmetric Hero */}
       <AsymmetricHero
         title="Efficient Permanent Recruitment for Educational Institutions"
@@ -162,6 +163,6 @@ export default function ForSchools() {
         }}
         variant="primary"
       />
-    </main>
+    </PageContainer>
   )
 }
