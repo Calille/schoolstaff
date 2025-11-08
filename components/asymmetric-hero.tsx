@@ -71,21 +71,42 @@ export function AsymmetricHero({
             )}
 
             <ScrollReveal animation="fade-right" delay={600} duration={600}>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <Link
                   href={primaryCTA.href}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-700 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group whitespace-nowrap"
+                  className="
+                    inline-flex items-center justify-center gap-2 
+                    w-full sm:w-auto
+                    px-8 py-4 
+                    bg-white text-primary-700 
+                    rounded-lg font-semibold text-lg 
+                    shadow-xl hover:shadow-2xl 
+                    transform hover:scale-105 
+                    transition-all duration-300 
+                    group
+                    min-w-[200px]
+                  "
                 >
-                  {primaryCTA.text}
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <span className="whitespace-nowrap">{primaryCTA.text}</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
                 </Link>
 
                 {secondaryCTA && (
                   <Link
                     href={secondaryCTA.href}
-                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-primary-700 transform hover:scale-105 transition-all duration-300 whitespace-nowrap"
+                    className="
+                      inline-flex items-center justify-center 
+                      w-full sm:w-auto
+                      px-8 py-4 
+                      border-2 border-white text-white 
+                      rounded-lg font-semibold text-lg 
+                      hover:bg-white hover:text-primary-700 
+                      transform hover:scale-105 
+                      transition-all duration-300
+                      min-w-[200px]
+                    "
                   >
-                    {secondaryCTA.text}
+                    <span className="whitespace-nowrap">{secondaryCTA.text}</span>
                   </Link>
                 )}
               </div>

@@ -134,15 +134,15 @@ export default function AdminInvoicingPage() {
       const data = await response.json()
 
       if (!response.ok) {
-        throw new Error(data.error?.message || data.error || 'Failed to finalize invoice')
+        throw new Error(data.error?.message || data.error || 'Failed to finalise invoice')
       }
 
       trackInvoiceGeneration(true)
-      toast.success('Invoice finalized successfully')
+      toast.success('Invoice finalised successfully')
       loadInvoices()
     } catch (error: any) {
       trackInvoiceGeneration(false)
-      toast.error(error.message || 'Failed to finalize invoice')
+      toast.error(error.message || 'Failed to finalise invoice')
     } finally {
       setProcessing(false)
       setFinalizingId(null)

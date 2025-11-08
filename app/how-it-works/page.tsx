@@ -50,7 +50,7 @@ export default function HowItWorks() {
     {
       number: 'Step 5',
       title: 'Placement Completion',
-      description: 'Select your ideal candidate and finalize the placement. Process our one-time flat fee, receive compliance documentation support, and welcome your new hire to the team.',
+      description: 'Select your ideal candidate and finalise the placement. Process our one-time flat fee, receive compliance documentation support, and welcome your new hire to the team.',
       icon: Award,
     },
   ]

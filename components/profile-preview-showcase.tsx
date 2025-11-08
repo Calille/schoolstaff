@@ -54,7 +54,7 @@ export function ProfilePreviewShowcase() {
                 <div>
                   <h4 className="text-lg font-bold text-gray-900 mb-2">About</h4>
                   <p className="text-gray-600">
-                    Experienced primary teacher with 8 years specializing in Key Stage 2. Passionate about creating engaging learning environments...
+                    Experienced primary teacher with 8 years specialising in Key Stage 2. Passionate about creating engaging learning environments...
                   </p>
                 </div>
 

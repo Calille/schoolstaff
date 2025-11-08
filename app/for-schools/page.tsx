@@ -67,7 +67,7 @@ export default function ForSchools() {
     {
       number: 'Step 2',
       title: 'Post Vacancies or Search Database',
-      description: 'Publish detailed job descriptions for qualified professionals to review, or search our database by location, qualifications, experience, and specialization. Access comprehensive profiles with CVs and certifications.',
+      description: 'Publish detailed job descriptions for qualified professionals to review, or search our database by location, qualifications, experience, and specialisation. Access comprehensive profiles with CVs and certifications.',
       icon: Search,
     },
     {
@@ -79,7 +79,7 @@ export default function ForSchools() {
     {
       number: 'Step 4',
       title: 'Complete Your Placement',
-      description: 'Select your ideal candidate and finalize the placement. Process our flat fee and receive comprehensive compliance documentation support.',
+      description: 'Select your ideal candidate and finalise the placement. Process our flat fee and receive comprehensive compliance documentation support.',
       icon: CheckCircle,
     },
   ]

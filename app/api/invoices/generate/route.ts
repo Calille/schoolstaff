@@ -223,7 +223,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Get invoice with lines for finalization
+    // Get invoice with lines for finalisation
     const { data: invoice, error: invoiceFetchError } = await supabaseAdmin
       .from('school_invoices')
       .select(`
@@ -339,7 +339,7 @@ export async function POST(request: NextRequest) {
         }
       }
 
-      // Notify school of invoice finalization (only if successfully finalized)
+      // Notify school of invoice finalisation (only if successfully finalised)
       if (schoolData && updateData.status === 'open') {
         if (schoolData.profile_id) {
           await notifyUserIds([schoolData.profile_id], 'invoice_finalized', {
