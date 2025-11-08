@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
@@ -87,8 +88,15 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="text-xl font-semibold text-gray-900">
-            School Staff
+          <Link href="/" className="flex items-center gap-2">
+            <Image 
+              src="/logo.png"
+              alt="School Staff Logo"
+              width={120}
+              height={40}
+              className="h-8 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
