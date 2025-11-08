@@ -16,64 +16,148 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center py-20">
         <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          Find Qualified School Staff
-          <br />
-          <span className="text-gray-600">When You Need Them</span>
+          Find Your Perfect Match in Education
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Connect with experienced educators and support staff. Fast, reliable, and trusted by schools across the country.
+          We're connecting schools with brilliant education professionals across the UK. Whether you're a school looking for talent or a teacher seeking your next role, we've made it dead simple.
         </p>
-        <div className="flex gap-4 justify-center">
+        <div className="flex gap-4 justify-center flex-wrap">
           <Link href="/for-schools">
-            <Button size="lg">Find Staff</Button>
+            <Button size="lg">For Schools</Button>
           </Link>
           <Link href="/for-staff">
             <Button size="lg" variant="outline">
-              Join as Staff
+              For Staff
+            </Button>
+          </Link>
+          <Link href="/how-it-works">
+            <Button size="lg" variant="outline">
+              How It Works
             </Button>
           </Link>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Value Proposition Section */}
       <section className="py-20">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-          Why Choose School Staff?
+          Why Everyone's Switching to School Staff
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <Card className="p-6">
-            <h3 className="text-xl font-semibold mb-3">Quick Booking</h3>
+            <h3 className="text-xl font-semibold mb-3">One Flat Fee, That's It</h3>
             <p className="text-gray-600">
-              Request staff in minutes. Our streamlined process gets you the help you need fast.
+              No surprise bills. No commission on salaries. Just one simple, honest fee when you hire. Done.
             </p>
           </Card>
           <Card className="p-6">
-            <h3 className="text-xl font-semibold mb-3">Verified Staff</h3>
+            <h3 className="text-xl font-semibold mb-3">Every Role Under the Sun</h3>
             <p className="text-gray-600">
-              All staff members are vetted and verified. Quality assurance you can trust.
+              Head Teacher? Yep. Teaching Assistant? Got 'em. Even the midday supervisors and cleaning crew. If your school needs it, we've got it.
             </p>
           </Card>
           <Card className="p-6">
-            <h3 className="text-xl font-semibold mb-3">Flexible Options</h3>
+            <h3 className="text-xl font-semibold mb-3">Cut Out the Middleman</h3>
             <p className="text-gray-600">
-              Full-time, part-time, or temporary placements. We match your needs.
+              Browse profiles, message directly, book meetings yourself. No waiting around for agencies to get back to you.
+            </p>
+          </Card>
+          <Card className="p-6">
+            <h3 className="text-xl font-semibold mb-3">Quality People Only</h3>
+            <p className="text-gray-600">
+              Everyone's verified with proper compliance docs and qualifications. We do the boring stuff so you don't have to.
             </p>
           </Card>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* How It Works Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Honestly, It's Pretty Simple
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-6">
+              <div className="flex gap-4 mb-4">
+                <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Sign Up (Takes 2 Minutes)</h3>
+                  <p className="text-gray-600">
+                    Free for everyone. No credit card needed.
+                  </p>
+                </div>
+              </div>
+            </Card>
+            <Card className="p-6">
+              <div className="flex gap-4 mb-4">
+                <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Start Browsing</h3>
+                  <p className="text-gray-600">
+                    Schools: Check out our talented staff near you. Staff: See what roles are going and apply.
+                  </p>
+                </div>
+              </div>
+            </Card>
+            <Card className="p-6">
+              <div className="flex gap-4 mb-4">
+                <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Connect Directly</h3>
+                  <p className="text-gray-600">
+                    Message, book meetings, have a chat. Do it all through our platform.
+                  </p>
+                </div>
+              </div>
+            </Card>
+            <Card className="p-6">
+              <div className="flex gap-4 mb-4">
+                <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+                  4
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Make It Official</h3>
+                  <p className="text-gray-600">
+                    Schools pay our flat fee when you hire. Staff? You never pay a penny.
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/signup">
+              <Button size="lg">Get Started</Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
       <section className="py-20 text-center">
         <Card className="p-12 bg-gray-50">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to Get Started?
+            Ready to Make Better Connections?
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Join hundreds of schools already using School Staff.
+            Join hundreds of schools and thousands of education pros who are hiring (and getting hired) the smart way.
           </p>
-          <Link href="/signup">
-            <Button size="lg">Create Account</Button>
-          </Link>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link href="/signup">
+              <Button size="lg">Sign Up as a School</Button>
+            </Link>
+            <Link href="/signup">
+              <Button size="lg" variant="outline">
+                Sign Up as Staff
+              </Button>
+            </Link>
+          </div>
         </Card>
       </section>
     </PageContainer>
