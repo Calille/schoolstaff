@@ -1,276 +1,236 @@
-import { PageContainer } from '@/components/page-container'
-import { Card } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import { createClient } from '@/lib/supabase/server'
-import { SchoolCountTeaser } from '@/components/school-count-teaser'
-import { SchoolList } from '@/components/school-list'
-import { AnimatedSection } from '@/components/animated-section'
-import { AnimatedGradientText } from '@/components/animated-gradient-text'
-import { FloatingCard } from '@/components/floating-card'
+'use client'
 
-/**
- * For Staff Page
- * 
- * Marketing page explaining how teachers/staff can join and get booked.
- * Shows teaser count for non-logged-in users, full school listings for logged-in staff.
- */
-export default async function ForStaffPage() {
-  const supabase = await createClient()
-  const {
-    data: { session },
-  } = await supabase.auth.getSession()
+import { ScrollReveal } from '@/components/scroll-reveal'
+import { StaggeredGrid } from '@/components/staggered-grid'
+import { ProfessionalFeatureCard } from '@/components/professional-feature-card'
+import { ProfilePreviewShowcase } from '@/components/profile-preview-showcase'
+import { SchoolCarousel } from '@/components/school-carousel'
+import { ProfessionalCTASection } from '@/components/professional-cta-section'
+import { 
+  User,
+  MessageSquare,
+  Briefcase,
+  Search,
+  DollarSign,
+  CheckCircle
+} from 'lucide-react'
+import Link from 'next/link'
+
+export default function ForStaff() {
+  const benefits = [
+    {
+      icon: User,
+      title: 'Professional Profile Showcase',
+      description: 'Develop a comprehensive profile highlighting your qualifications, experience, specializations, and unique value proposition. Enable institutions to discover your expertise.',
+      variant: 'white' as const,
+    },
+    {
+      icon: MessageSquare,
+      title: 'Direct Institution Access',
+      description: 'Eliminate agency intermediaries. Communicate directly with hiring institutions, schedule your own interviews, and negotiate terms transparently.',
+      variant: 'white' as const,
+    },
+    {
+      icon: Briefcase,
+      title: 'Comprehensive Opportunity Access',
+      description: 'Whether you\'re seeking leadership positions, classroom teaching roles, learning support, or specialized positions, our platform serves all education career paths.',
+      variant: 'white' as const,
+    },
+    {
+      icon: Search,
+      title: 'Dual Application Approach',
+      description: 'Browse posted vacancies and submit applications while maintaining visibility to institutions searching our database. Maximize your exposure to opportunities.',
+      variant: 'white' as const,
+    },
+    {
+      icon: DollarSign,
+      title: 'Permanent Access at No Cost',
+      description: 'Create your profile, apply to positions, and connect with institutions completely free. Our platform never charges education professionals.',
+      variant: 'white' as const,
+    },
+  ]
+
+  // Mock school data - replace with real data
+  const schools = Array(10).fill(null).map((_, i) => ({
+    id: `school-${i}`,
+    name: `Example School ${i + 1}`,
+    location: i % 3 === 0 ? 'London' : i % 3 === 1 ? 'Manchester' : 'Birmingham',
+    openRoles: Math.floor(Math.random() * 5) + 1,
+    type: 'Primary Academy',
+  }))
 
   return (
-    <PageContainer>
-      <div className="max-w-4xl mx-auto">
-        {/* Hero Section */}
-        <div className="text-center mb-12">
-          <AnimatedSection animation="fade-in-down">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Advance Your Career in Education
-            </h1>
-          </AnimatedSection>
-          <AnimatedSection animation="fade-in-up" delay={200}>
-            <p className="text-xl text-gray-600 mb-8">
-              Join education professionals utilizing School Staff to secure permanent positions. Create your professional profile, showcase your qualifications, and connect directly with hiring institutions.
-            </p>
-          </AnimatedSection>
-          <AnimatedSection animation="fade-in-up" delay={400}>
-            <div className="flex gap-4 justify-center flex-wrap">
-              <Link href="/signup">
-                <Button size="lg">Create Professional Profile</Button>
-              </Link>
-              <Link href="/dashboard/staff/requests">
-                <Button size="lg" variant="outline">
-                  Browse Opportunities
-                </Button>
-              </Link>
-            </div>
-          </AnimatedSection>
+    <main className="min-h-screen">
+      {/* Centered Hero with Background */}
+      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white overflow-hidden py-24 lg:py-32">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
         </div>
 
-        {/* Main Benefits Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Why Education Professionals Choose Our Platform
-          </h2>
-          <div className="space-y-6">
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Professional Profile Showcase</h3>
-              <p className="text-gray-600">
-                Develop a comprehensive profile highlighting your qualifications, experience, specializations, and unique value proposition. Enable institutions to discover your expertise.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Direct Institution Access</h3>
-              <p className="text-gray-600">
-                Eliminate agency intermediaries. Communicate directly with hiring institutions, schedule your own interviews, and negotiate terms transparently.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Comprehensive Opportunity Access</h3>
-              <p className="text-gray-600">
-                Whether you're seeking leadership positions, classroom teaching roles, learning support, or specialized positions, our platform serves all education career paths.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Dual Application Approach</h3>
-              <p className="text-gray-600">
-                Browse posted vacancies and submit applications while maintaining visibility to institutions searching our database. Maximize your exposure to opportunities.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Permanent Access at No Cost</h3>
-              <p className="text-gray-600">
-                Create your profile, apply to positions, and connect with institutions completely free. Our platform never charges education professionals.
-              </p>
-            </Card>
-          </div>
-        </section>
+        {/* Floating badge */}
+        <div className="absolute top-10 right-10 bg-green-500 text-white px-6 py-3 rounded-full shadow-2xl font-bold text-lg animate-bounce-subtle">
+          100% Free Forever
+        </div>
 
-        {/* How It Works Section */}
-        <section className="mb-12 bg-gray-50 p-8 rounded-lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Your Career Advancement Path
-          </h2>
-          <div className="space-y-6">
-            <AnimatedSection animation="fade-in-up" delay={0}>
-              <FloatingCard delay={0}>
-                <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                    1
-                  </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Professional Registration</h3>
-                  <p className="text-gray-600">
-                    Complete our brief registration process. Establish your professional presence in minutes.
-                  </p>
-                </div>
-              </div>
-              </FloatingCard>
-            </AnimatedSection>
-            <AnimatedSection animation="fade-in-up" delay={200}>
-              <FloatingCard delay={200}>
-                <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                    2
-                  </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Profile Development</h3>
-                  <ul className="text-gray-600 list-disc list-inside space-y-1">
-                    <li>Current position and professional title</li>
-                    <li>Educational qualifications and certifications</li>
-                    <li>Professional experience and achievements</li>
-                    <li>Subject specializations and expertise areas</li>
-                    <li>Professional CV and compliance documentation</li>
-                    <li>Career objectives and position preferences</li>
-                  </ul>
-                </div>
-              </div>
-              </FloatingCard>
-            </AnimatedSection>
-            <AnimatedSection animation="fade-in-up" delay={400}>
-              <FloatingCard delay={400}>
-                <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                    3
-                  </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Opportunity Engagement</h3>
-                  <ul className="text-gray-600 list-disc list-inside space-y-1">
-                    <li>Receive interview requests from interested institutions</li>
-                    <li>Browse available positions and submit applications</li>
-                    <li>Access notifications regarding institutional interest</li>
-                    <li>Schedule interviews according to your availability</li>
-                  </ul>
-                </div>
-              </div>
-              </FloatingCard>
-            </AnimatedSection>
-            <AnimatedSection animation="fade-in-up" delay={600}>
-              <FloatingCard delay={600}>
-                <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                    4
-                  </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Secure Your Position</h3>
-                  <p className="text-gray-600">
-                    Conduct interviews with institutions, evaluate opportunities, and make informed career decisions. Accept your ideal position and advance your career.
-                  </p>
-                </div>
-              </div>
-              </FloatingCard>
-            </AnimatedSection>
-          </div>
-          <div className="text-center mt-8">
-            <Link href="/signup">
-              <Button size="lg">Create Your Profile</Button>
-            </Link>
-          </div>
-        </section>
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <ScrollReveal animation="fade-down">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              Advance Your Career in Education
+            </h1>
+          </ScrollReveal>
 
-        {/* Schools Section */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Institutions Currently Recruiting
-          </h2>
-          <div className="mb-6">
-            <SchoolCountTeaser />
-          </div>
-          <p className="text-center text-gray-600 mb-6">
-            Educational institutions are actively recruiting qualified professionals.
-          </p>
-          {!session && (
-            <div className="text-center">
-              <Link href="/signup">
-                <Button size="lg">Register to View All Opportunities</Button>
-              </Link>
-            </div>
-          )}
-        </section>
-
-        {/* Show real school listings if logged in as staff */}
-        {session && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Schools Hiring Near You
-            </h2>
-            <SchoolList />
-          </div>
-        )}
-
-        {/* Roles We Cover Section */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Comprehensive Position Coverage
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-3">Teaching Positions</h3>
-              <ul className="text-gray-600 space-y-1 text-sm">
-                <li>• Head Teachers & Deputy Head Teachers</li>
-                <li>• Primary Teachers (All Key Stages)</li>
-                <li>• Secondary Teachers (All Subject Areas)</li>
-                <li>• Early Years & Foundation Stage Teachers</li>
-                <li>• Special Educational Needs Teachers & Specialists</li>
-              </ul>
-            </Card>
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-3">Support Positions</h3>
-              <ul className="text-gray-600 space-y-1 text-sm">
-                <li>• Teaching Assistants & Learning Support</li>
-                <li>• Higher Level Teaching Assistants (HLTA)</li>
-                <li>• Special Educational Needs Support Staff</li>
-                <li>• Cover Supervisors & Supply Teachers</li>
-                <li>• Learning Mentors & Pastoral Support</li>
-              </ul>
-            </Card>
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-3">Administrative & Operations</h3>
-              <ul className="text-gray-600 space-y-1 text-sm">
-                <li>• School Business Managers</li>
-                <li>• Administrative & Office Staff</li>
-                <li>• Site Managers & Caretakers</li>
-                <li>• Midday Supervisors</li>
-                <li>• Facilities & Cleaning Staff</li>
-              </ul>
-            </Card>
-          </div>
-          <p className="text-center text-gray-600 mt-4">Additional specialized roles available</p>
-          <div className="text-center mt-6">
-            <Link href="/dashboard/staff/requests">
-              <Button size="lg" variant="outline">
-                View All Opportunities
-              </Button>
-            </Link>
-          </div>
-        </section>
-
-        {/* Final CTA */}
-        <section className="text-center">
-          <Card className="p-8 bg-gray-50">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Take the Next Step in Your Education Career
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Join thousands of education professionals who have secured their ideal permanent positions through our platform.
+          <ScrollReveal animation="fade-up" delay={200}>
+            <p className="text-xl md:text-2xl text-primary-100 mb-10 leading-relaxed">
+              Join 2,000+ education professionals utilizing School Staff to secure permanent positions. Create your professional profile, showcase your qualifications, and connect directly with hiring institutions.
             </p>
-            <div className="flex gap-4 justify-center flex-wrap">
-              <Link href="/signup">
-                <Button size="lg">Create Your Profile</Button>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade-up" delay={400}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/signup?role=staff"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-700 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              >
+                Create Professional Profile
               </Link>
-              <Link href="/dashboard/staff/requests">
-                <Button size="lg" variant="outline">
-                  Browse Opportunities
-                </Button>
+              <Link
+                href="#opportunities"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-primary-700 transform hover:scale-105 transition-all duration-300"
+              >
+                Browse Opportunities
               </Link>
             </div>
-          </Card>
-        </section>
+          </ScrollReveal>
+        </div>
+
+        {/* Bottom wave */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+            <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+          </svg>
+        </div>
+      </section>
+
+      {/* Benefits Grid */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <ScrollReveal animation="fade-up">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Why Education Professionals Choose Our Platform
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Everything you need to advance your education career in one professional platform
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <StaggeredGrid columns={3} staggerDelay={100}>
+            {benefits.map((benefit, index) => (
+              <ProfessionalFeatureCard
+                key={index}
+                icon={benefit.icon}
+                title={benefit.title}
+                description={benefit.description}
+                variant={benefit.variant}
+              />
+            ))}
+          </StaggeredGrid>
+        </div>
+      </section>
+
+      {/* Profile Preview Showcase */}
+      <ProfilePreviewShowcase />
+
+      {/* School Carousel */}
+      <div id="opportunities">
+        <SchoolCarousel
+          schools={schools}
+          totalCount={500}
+          isLoggedIn={false}
+        />
       </div>
-    </PageContainer>
+
+      {/* Roles Coverage - Expandable */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <ScrollReveal animation="fade-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
+              Comprehensive Position Coverage
+            </h2>
+          </ScrollReveal>
+
+          <div className="space-y-6">
+            {[
+              {
+                title: 'Teaching Positions',
+                roles: [
+                  'Head Teachers & Deputy Head Teachers',
+                  'Primary Teachers (All Key Stages)',
+                  'Secondary Teachers (All Subject Areas)',
+                  'Early Years & Foundation Stage Teachers',
+                  'Special Educational Needs Teachers & Specialists',
+                ],
+              },
+              {
+                title: 'Support Positions',
+                roles: [
+                  'Teaching Assistants & Learning Support',
+                  'Higher Level Teaching Assistants (HLTA)',
+                  'Special Educational Needs Support Staff',
+                  'Cover Supervisors & Supply Teachers',
+                  'Learning Mentors & Pastoral Support',
+                ],
+              },
+              {
+                title: 'Administrative & Operations',
+                roles: [
+                  'School Business Managers',
+                  'Administrative & Office Staff',
+                  'Site Managers & Caretakers',
+                  'Midday Supervisors',
+                  'Facilities & Cleaning Staff',
+                ],
+              },
+            ].map((category, index) => (
+              <ScrollReveal key={index} animation="fade-up" delay={index * 100}>
+                <div className="bg-gradient-to-r from-primary-50 to-white rounded-xl p-8 border-2 border-primary-100 hover:border-primary-300 transition-all">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                    <CheckCircle className="w-7 h-7 text-primary-600" />
+                    {category.title}
+                  </h3>
+                  <ul className="grid md:grid-cols-2 gap-3">
+                    {category.roles.map((role, roleIndex) => (
+                      <li key={roleIndex} className="flex items-center gap-2 text-gray-700">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary-600" />
+                        {role}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <ProfessionalCTASection
+        title="Take the Next Step in Your Education Career"
+        subtitle="Join thousands of education professionals who have secured their ideal permanent positions through our platform."
+        primaryButton={{
+          text: 'Create Your Profile',
+          href: '/signup?role=staff',
+        }}
+        secondaryButton={{
+          text: 'Browse Opportunities',
+          href: '#opportunities',
+        }}
+        variant="accent"
+      />
+    </main>
   )
 }
-

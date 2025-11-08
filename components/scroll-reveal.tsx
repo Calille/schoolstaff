@@ -13,6 +13,8 @@ type AnimationType =
   | 'slide-down'
   | 'flip-up'
   | 'blur-in'
+  | 'slide-in-left'
+  | 'slide-in-right'
 
 interface ScrollRevealProps {
   children: React.ReactNode
@@ -101,6 +103,10 @@ export function ScrollReveal({
           return { ...baseStyle, opacity: 0, transform: 'perspective(1000px) rotateX(90deg)' }
         case 'blur-in':
           return { ...baseStyle, opacity: 0, filter: 'blur(4px)' }
+        case 'slide-in-left':
+          return { ...baseStyle, opacity: 0, transform: 'translateX(-100px)' }
+        case 'slide-in-right':
+          return { ...baseStyle, opacity: 0, transform: 'translateX(100px)' }
         default:
           return { ...baseStyle, opacity: 0 }
       }
