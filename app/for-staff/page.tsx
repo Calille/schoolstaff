@@ -28,23 +28,22 @@ export default async function ForStaffPage() {
         <div className="text-center mb-12">
           <AnimatedSection animation="fade-in-down">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Your Next School Role is{' '}
-              <AnimatedGradientText>Waiting</AnimatedGradientText>
+              Advance Your Career in Education
             </h1>
           </AnimatedSection>
           <AnimatedSection animation="fade-in-up" delay={200}>
             <p className="text-xl text-gray-600 mb-8">
-              Join education professionals who are finding their perfect school matches with us. Build your profile, show off what you're good at, and connect directly with hiring schools.
+              Join education professionals utilizing School Staff to secure permanent positions. Create your professional profile, showcase your qualifications, and connect directly with hiring institutions.
             </p>
           </AnimatedSection>
           <AnimatedSection animation="fade-in-up" delay={400}>
             <div className="flex gap-4 justify-center flex-wrap">
               <Link href="/signup">
-                <Button size="lg">Create Your Profile</Button>
+                <Button size="lg">Create Professional Profile</Button>
               </Link>
               <Link href="/dashboard/staff/requests">
                 <Button size="lg" variant="outline">
-                  Browse School Roles
+                  Browse Opportunities
                 </Button>
               </Link>
             </div>
@@ -54,37 +53,37 @@ export default async function ForStaffPage() {
         {/* Main Benefits Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Why Teachers Love School Staff
+            Why Education Professionals Choose Our Platform
           </h2>
           <div className="space-y-6">
             <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Show Off Your Skills</h3>
+              <h3 className="text-xl font-semibold mb-3">Professional Profile Showcase</h3>
               <p className="text-gray-600">
-                Build a profile that actually shows who you are – your qualifications, experience, what makes you great. Let schools come to you.
+                Develop a comprehensive profile highlighting your qualifications, experience, specializations, and unique value proposition. Enable institutions to discover your expertise.
               </p>
             </Card>
             <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Talk Directly to Schools</h3>
+              <h3 className="text-xl font-semibold mb-3">Direct Institution Access</h3>
               <p className="text-gray-600">
-                No agency in the middle taking a cut. Message schools, book your own interviews, sort out your terms face-to-face.
+                Eliminate agency intermediaries. Communicate directly with hiring institutions, schedule your own interviews, and negotiate terms transparently.
               </p>
             </Card>
             <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Every Type of School Job</h3>
+              <h3 className="text-xl font-semibold mb-3">Comprehensive Opportunity Access</h3>
               <p className="text-gray-600">
-                Head Teacher, Classroom Teacher, TA, SEN Specialist, Support Staff – doesn't matter what you do, there's a spot for you.
+                Whether you're seeking leadership positions, classroom teaching roles, learning support, or specialized positions, our platform serves all education career paths.
               </p>
             </Card>
             <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Apply to Everything</h3>
+              <h3 className="text-xl font-semibold mb-3">Dual Application Approach</h3>
               <p className="text-gray-600">
-                Browse open roles and apply to as many as you fancy. Plus schools can find you and reach out directly.
+                Browse posted vacancies and submit applications while maintaining visibility to institutions searching our database. Maximize your exposure to opportunities.
               </p>
             </Card>
             <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Totally Free Forever</h3>
+              <h3 className="text-xl font-semibold mb-3">Permanent Access at No Cost</h3>
               <p className="text-gray-600">
-                Create your profile, apply to jobs, connect with schools – all free. We never charge staff. Ever.
+                Create your profile, apply to positions, and connect with institutions completely free. Our platform never charges education professionals.
               </p>
             </Card>
           </div>
@@ -93,7 +92,7 @@ export default async function ForStaffPage() {
         {/* How It Works Section */}
         <section className="mb-12 bg-gray-50 p-8 rounded-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Four Dead Simple Steps
+            Your Career Advancement Path
           </h2>
           <div className="space-y-6">
             <AnimatedSection animation="fade-in-up" delay={0}>
@@ -103,9 +102,9 @@ export default async function ForStaffPage() {
                     1
                   </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Create Your Profile (Free)</h3>
+                  <h3 className="text-xl font-semibold mb-2">Professional Registration</h3>
                   <p className="text-gray-600">
-                    Quick sign-up. Add your details and you're in.
+                    Complete our brief registration process. Establish your professional presence in minutes.
                   </p>
                 </div>
               </div>
@@ -118,13 +117,14 @@ export default async function ForStaffPage() {
                     2
                   </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Make Yourself Look Good</h3>
+                  <h3 className="text-xl font-semibold mb-2">Profile Development</h3>
                   <ul className="text-gray-600 list-disc list-inside space-y-1">
-                    <li>Your job title and current gig</li>
-                    <li>Qualifications and certs</li>
-                    <li>Your experience and what you're brilliant at</li>
-                    <li>Chuck up your CV and compliance docs</li>
-                    <li>Write a bit about yourself (keep it real)</li>
+                    <li>Current position and professional title</li>
+                    <li>Educational qualifications and certifications</li>
+                    <li>Professional experience and achievements</li>
+                    <li>Subject specializations and expertise areas</li>
+                    <li>Professional CV and compliance documentation</li>
+                    <li>Career objectives and position preferences</li>
                   </ul>
                 </div>
               </div>
@@ -137,12 +137,12 @@ export default async function ForStaffPage() {
                     3
                   </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Get Found or Go Looking</h3>
+                  <h3 className="text-xl font-semibold mb-2">Opportunity Engagement</h3>
                   <ul className="text-gray-600 list-disc list-inside space-y-1">
-                    <li>Schools browse profiles and message you</li>
-                    <li>Check out available roles and apply</li>
-                    <li>Get notified when schools are interested</li>
-                    <li>Book interviews that work for you</li>
+                    <li>Receive interview requests from interested institutions</li>
+                    <li>Browse available positions and submit applications</li>
+                    <li>Access notifications regarding institutional interest</li>
+                    <li>Schedule interviews according to your availability</li>
                   </ul>
                 </div>
               </div>
@@ -155,9 +155,9 @@ export default async function ForStaffPage() {
                     4
                   </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Interview & Accept</h3>
+                  <h3 className="text-xl font-semibold mb-2">Secure Your Position</h3>
                   <p className="text-gray-600">
-                    Meet the school, have a proper chat, see if it feels right. When you're happy, accept the offer and start your new role.
+                    Conduct interviews with institutions, evaluate opportunities, and make informed career decisions. Accept your ideal position and advance your career.
                   </p>
                 </div>
               </div>
@@ -174,15 +174,18 @@ export default async function ForStaffPage() {
         {/* Schools Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Schools Looking Right Now
+            Institutions Currently Recruiting
           </h2>
           <div className="mb-6">
             <SchoolCountTeaser />
           </div>
+          <p className="text-center text-gray-600 mb-6">
+            Educational institutions are actively recruiting qualified professionals.
+          </p>
           {!session && (
             <div className="text-center">
               <Link href="/signup">
-                <Button size="lg">Sign Up to See All Roles</Button>
+                <Button size="lg">Register to View All Opportunities</Button>
               </Link>
             </div>
           )}
@@ -201,45 +204,45 @@ export default async function ForStaffPage() {
         {/* Roles We Cover Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Every Education Job Going
+            Comprehensive Position Coverage
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-3">Teaching Roles</h3>
+              <h3 className="text-lg font-semibold mb-3">Teaching Positions</h3>
               <ul className="text-gray-600 space-y-1 text-sm">
-                <li>• Head Teachers & Deputies</li>
-                <li>• Primary Teachers (All Years)</li>
-                <li>• Secondary Teachers (All Subjects)</li>
-                <li>• Early Years Teachers</li>
-                <li>• SEN Teachers & Specialists</li>
+                <li>• Head Teachers & Deputy Head Teachers</li>
+                <li>• Primary Teachers (All Key Stages)</li>
+                <li>• Secondary Teachers (All Subject Areas)</li>
+                <li>• Early Years & Foundation Stage Teachers</li>
+                <li>• Special Educational Needs Teachers & Specialists</li>
               </ul>
             </Card>
             <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-3">Support Roles</h3>
+              <h3 className="text-lg font-semibold mb-3">Support Positions</h3>
               <ul className="text-gray-600 space-y-1 text-sm">
-                <li>• Teaching Assistants</li>
-                <li>• HLTAs</li>
-                <li>• SEN Support Staff</li>
-                <li>• Cover Supervisors</li>
-                <li>• Learning Mentors</li>
+                <li>• Teaching Assistants & Learning Support</li>
+                <li>• Higher Level Teaching Assistants (HLTA)</li>
+                <li>• Special Educational Needs Support Staff</li>
+                <li>• Cover Supervisors & Supply Teachers</li>
+                <li>• Learning Mentors & Pastoral Support</li>
               </ul>
             </Card>
             <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-3">Admin & Facilities</h3>
+              <h3 className="text-lg font-semibold mb-3">Administrative & Operations</h3>
               <ul className="text-gray-600 space-y-1 text-sm">
                 <li>• School Business Managers</li>
-                <li>• Office Staff</li>
-                <li>• Caretakers & Site Managers</li>
-                <li>• Lunchtime Supervisors</li>
-                <li>• Cleaning Staff</li>
+                <li>• Administrative & Office Staff</li>
+                <li>• Site Managers & Caretakers</li>
+                <li>• Midday Supervisors</li>
+                <li>• Facilities & Cleaning Staff</li>
               </ul>
             </Card>
           </div>
-          <p className="text-center text-gray-600 mt-4">And loads more...</p>
+          <p className="text-center text-gray-600 mt-4">Additional specialized roles available</p>
           <div className="text-center mt-6">
             <Link href="/dashboard/staff/requests">
               <Button size="lg" variant="outline">
-                Browse All Roles
+                View All Opportunities
               </Button>
             </Link>
           </div>
@@ -249,10 +252,10 @@ export default async function ForStaffPage() {
         <section className="text-center">
           <Card className="p-8 bg-gray-50">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready for Your Next Move?
+              Take the Next Step in Your Education Career
             </h2>
             <p className="text-gray-600 mb-6">
-              Join thousands of education pros who've found their perfect school on here.
+              Join thousands of education professionals who have secured their ideal permanent positions through our platform.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Link href="/signup">
@@ -260,7 +263,7 @@ export default async function ForStaffPage() {
               </Link>
               <Link href="/dashboard/staff/requests">
                 <Button size="lg" variant="outline">
-                  See What's Available
+                  Browse Opportunities
                 </Button>
               </Link>
             </div>

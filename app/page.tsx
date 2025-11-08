@@ -1,144 +1,168 @@
 'use client'
 
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
+import { ProfessionalHero } from '@/components/professional-hero'
+import { ProfessionalStats } from '@/components/professional-stats'
+import { StaggeredGrid } from '@/components/staggered-grid'
+import { ProfessionalFeatureCard } from '@/components/professional-feature-card'
+import { ProfessionalProcess } from '@/components/professional-process'
+import { ProfessionalCTASection } from '@/components/professional-cta-section'
+import { ScrollReveal } from '@/components/scroll-reveal'
+import { 
+  DollarSign, 
+  Users, 
+  Zap, 
+  Shield,
+  CheckCircle,
+  Search,
+  Calendar,
+  UserCheck 
+} from 'lucide-react'
 import { PageContainer } from '@/components/page-container'
-import { trackPageView } from '@/lib/analytics'
-import { AnimatedSection } from '@/components/animated-section'
-import { AnimatedGradientText } from '@/components/animated-gradient-text'
-import { AnimatedCounter } from '@/components/animated-counter'
-import { AnimatedCTABanner } from '@/components/animated-cta-banner'
-import { AnimatedFeatureGrid } from '@/components/animated-feature-grid'
-import { FloatingCard } from '@/components/floating-card'
-import { CheckCircle, Users, TrendingUp, Award } from 'lucide-react'
 
 /**
- * Home Page
+ * Landing Page
  * 
- * Landing page for the School Staff platform.
- * Provides overview and navigation to key sections.
+ * Professional landing page for School Staff platform.
+ * Features scroll-triggered animations and modern layout.
  */
 export default function Home() {
+  const features = [
+    {
+      icon: DollarSign,
+      title: 'Transparent Flat-Fee Pricing',
+      description: 'Our straightforward pricing model eliminates commission-based fees. One competitive flat fee per successful placement, regardless of salary level or position. Predictable costs, exceptional value.',
+      variant: 'white' as const,
+    },
+    {
+      icon: Users,
+      title: 'Comprehensive Role Coverage',
+      description: 'From executive leadership to support staff, we facilitate placements across all educational roles. Our platform serves Head Teachers, Classroom Teachers, Teaching Assistants, Administrative Personnel, and Facilities Staff.',
+      variant: 'white' as const,
+    },
+    {
+      icon: Zap,
+      title: 'Direct Candidate Access',
+      description: 'Browse verified professional profiles, schedule interviews, and communicate directly with candidates. Our platform eliminates intermediaries, reducing time-to-hire and improving candidate quality.',
+      variant: 'white' as const,
+    },
+    {
+      icon: Shield,
+      title: 'Rigorous Compliance Verification',
+      description: 'All professionals maintain current DBS checks, safeguarding certifications, and relevant qualifications. Our verification process ensures regulatory compliance and peace of mind.',
+      variant: 'white' as const,
+    },
+  ]
+
+  const processSteps = [
+    {
+      number: 'Step 1',
+      title: 'Registration & Setup',
+      description: 'Complete our streamlined registration process at no cost. Access our platform immediately upon approval.',
+      icon: UserCheck,
+    },
+    {
+      number: 'Step 2',
+      title: 'Search & Connect',
+      description: 'Schools: Access our comprehensive database of qualified professionals. Professionals: Browse permanent opportunities and showcase your expertise.',
+      icon: Search,
+    },
+    {
+      number: 'Step 3',
+      title: 'Interview & Evaluate',
+      description: 'Schedule interviews directly through our platform. Conduct thorough assessments without agency pressure or time constraints.',
+      icon: Calendar,
+    },
+    {
+      number: 'Step 4',
+      title: 'Secure Your Hire',
+      description: 'Finalize your placement with our transparent flat fee. Professionals join at no cost. Simple, efficient, effective.',
+      icon: CheckCircle,
+    },
+  ]
+
+  const stats = [
+    { value: 500, suffix: '+', label: 'Registered Schools' },
+    { value: 2000, suffix: '+', label: 'Education Professionals' },
+    { value: 1500, suffix: '+', label: 'Successful Placements' },
+  ]
+
   return (
     <PageContainer>
-      {/* Hero Section */}
-      <section className="text-center py-20">
-        <AnimatedSection animation="fade-in-down">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-            Find Your Perfect Match in{' '}
-            <AnimatedGradientText>Education</AnimatedGradientText>
-          </h1>
-        </AnimatedSection>
-        <AnimatedSection animation="fade-in-up" delay={200}>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            We're connecting schools with brilliant education professionals across the UK. Whether you're a school looking for talent or a teacher seeking your next role, we've made it dead simple.
-          </p>
-        </AnimatedSection>
-        <AnimatedSection animation="fade-in-up" delay={400}>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/for-schools">
-              <Button size="lg">For Schools</Button>
-            </Link>
-            <Link href="/for-staff">
-              <Button size="lg" variant="outline">
-                For Staff
-              </Button>
-            </Link>
-            <Link href="/how-it-works">
-              <Button size="lg" variant="outline">
-                How It Works
-              </Button>
-            </Link>
-          </div>
-        </AnimatedSection>
-      </section>
-
-      {/* Value Proposition Section */}
-      <section className="py-20">
-        <AnimatedSection animation="fade-in">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Why Everyone's Switching to School Staff
-          </h2>
-        </AnimatedSection>
-        <AnimatedFeatureGrid
-          features={[
-            {
-              icon: CheckCircle,
-              title: "One Flat Fee, That's It",
-              description: "No surprise bills. No commission on salaries. Just one simple, honest fee when you hire. Done."
-            },
-            {
-              icon: Users,
-              title: "Every Role Under the Sun",
-              description: "Head Teacher? Yep. Teaching Assistant? Got 'em. Even the midday supervisors and cleaning crew. If your school needs it, we've got it."
-            },
-            {
-              icon: TrendingUp,
-              title: "Cut Out the Middleman",
-              description: "Browse profiles, message directly, book meetings yourself. No waiting around for agencies to get back to you."
-            },
-            {
-              icon: Award,
-              title: "Quality People Only",
-              description: "Everyone's verified with proper compliance docs and qualifications. We do the boring stuff so you don't have to."
-            }
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <ProfessionalHero
+          title="Permanent Recruitment Solutions for Education"
+          subtitle="School Staff is the UK's leading permanent recruitment platform connecting educational institutions with qualified professionals. Streamline your hiring process with our comprehensive database and transparent flat-fee structure."
+          highlights={[
+            'Flat-fee pricing with no hidden costs',
+            'Direct access to verified professionals',
+            'Comprehensive compliance verification',
           ]}
-          columns={2}
+          primaryCTA={{
+            text: 'For Schools',
+            href: '/for-schools',
+          }}
+          secondaryCTA={{
+            text: 'For Education Professionals',
+            href: '/for-staff',
+          }}
         />
-      </section>
 
-      {/* How It Works Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <AnimatedSection animation="fade-in">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Honestly, It's Pretty Simple
-            </h2>
-          </AnimatedSection>
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { num: 1, title: "Sign Up (Takes 2 Minutes)", desc: "Free for everyone. No credit card needed." },
-              { num: 2, title: "Start Browsing", desc: "Schools: Check out our talented staff near you. Staff: See what roles are going and apply." },
-              { num: 3, title: "Connect Directly", desc: "Message, book meetings, have a chat. Do it all through our platform." },
-              { num: 4, title: "Make It Official", desc: "Schools pay our flat fee when you hire. Staff? You never pay a penny." }
-            ].map((step, index) => (
-              <AnimatedSection key={index} animation="fade-in-up" delay={index * 100}>
-                <FloatingCard delay={index * 100}>
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                      {step.num}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                      <p className="text-gray-600">{step.desc}</p>
-                    </div>
-                  </div>
-                </FloatingCard>
-              </AnimatedSection>
-            ))}
+        {/* Statistics Section */}
+        <ProfessionalStats
+          title="Trusted by Educational Institutions Nationwide"
+          stats={stats}
+        />
+
+        {/* Features Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <ScrollReveal animation="fade-up">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                  Why Leading Schools Choose School Staff
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Our platform delivers comprehensive recruitment solutions designed for educational institutions
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <StaggeredGrid columns={2} staggerDelay={150}>
+              {features.map((feature, index) => (
+                <ProfessionalFeatureCard
+                  key={index}
+                  icon={feature.icon}
+                  title={feature.title}
+                  description={feature.description}
+                  variant={feature.variant}
+                />
+              ))}
+            </StaggeredGrid>
           </div>
-          <AnimatedSection animation="fade-in-up" delay={400}>
-            <div className="text-center mt-8">
-              <Link href="/signup">
-                <Button size="lg">Get Started</Button>
-              </Link>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+        </section>
 
-      {/* Final CTA Section */}
-      <section className="py-20">
-        <AnimatedCTABanner
-          title="Ready to Make Better Connections?"
-          subtitle="Join hundreds of schools and thousands of education pros who are hiring (and getting hired) the smart way."
-          primaryButtonText="Sign Up as a School"
-          primaryButtonLink="/signup?role=school"
-          secondaryButtonText="Sign Up as Staff"
-          secondaryButtonLink="/signup?role=staff"
+        {/* Process Section */}
+        <ProfessionalProcess
+          title="Streamlined Recruitment Process"
+          subtitle="Four simple steps to transform your recruitment experience"
+          steps={processSteps}
         />
-      </section>
+
+        {/* Final CTA */}
+        <ProfessionalCTASection
+          title="Transform Your Recruitment Strategy"
+          subtitle="Join hundreds of educational institutions leveraging our platform for efficient, cost-effective permanent recruitment."
+          primaryButton={{
+            text: 'Register as a School',
+            href: '/signup?role=school',
+          }}
+          secondaryButton={{
+            text: 'Register as a Professional',
+            href: '/signup?role=staff',
+          }}
+        />
+      </main>
     </PageContainer>
   )
 }

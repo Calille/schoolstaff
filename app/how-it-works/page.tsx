@@ -21,12 +21,12 @@ export default function HowItWorksPage() {
         <div className="text-center mb-12">
           <AnimatedSection animation="fade-in-down">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              How School Staff <AnimatedGradientText>Works</AnimatedGradientText>
+              Our Recruitment Process
             </h1>
           </AnimatedSection>
           <AnimatedSection animation="fade-in-up" delay={200}>
             <p className="text-xl text-gray-600">
-              The simple way for schools and teachers to connect. No agencies taking a cut, no commission on salaries, just honest connections.
+              School Staff provides a transparent, efficient permanent recruitment platform. Direct connections between educational institutions and qualified professionals, without traditional agency barriers.
             </p>
           </AnimatedSection>
         </div>
@@ -35,73 +35,73 @@ export default function HowItWorksPage() {
         <section className="mb-12">
           <Card className="p-8 bg-gray-50">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              It's a Two-Way Thing
+              Two-Way Recruitment Marketplace
             </h2>
             <p className="text-gray-700 mb-6 text-center">
-              School Staff is basically a permanent recruitment marketplace that works both ways:
+              School Staff operates as a comprehensive permanent recruitment platform serving both educational institutions and education professionals:
             </p>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
-                <h3 className="font-semibold text-gray-900 mb-3">Schools Can:</h3>
+                <h3 className="font-semibold text-gray-900 mb-3">For Educational Institutions:</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                    <span>Post your open jobs for teachers to apply</span>
+                    <span>Post permanent vacancies for professional applications</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                    <span>Browse our database of qualified people</span>
+                    <span>Search our database of verified education professionals</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                    <span>Message candidates directly</span>
+                    <span>Request interviews with qualified candidates</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                    <span>Hire with one simple flat fee</span>
+                    <span>Complete placements with transparent flat-fee pricing</span>
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 mb-3">Staff Can:</h3>
+                <h3 className="font-semibold text-gray-900 mb-3">For Education Professionals:</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                    <span>Build a proper profile showing off your skills</span>
+                    <span>Develop comprehensive professional profiles</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                    <span>Apply to school roles you like</span>
+                    <span>Apply to institutional vacancies</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                    <span>Get discovered by schools looking for you</span>
+                    <span>Be discovered by institutions seeking specific expertise</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                    <span>Chat directly with hiring schools</span>
+                    <span>Communicate directly with hiring decision-makers</span>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="border-t pt-6">
-              <h3 className="font-semibold text-gray-900 mb-3 text-center">Everyone Wins:</h3>
+              <h3 className="font-semibold text-gray-900 mb-3 text-center">Mutual Benefits:</h3>
               <div className="grid md:grid-cols-2 gap-2">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900" />
-                  <span className="text-gray-700">No agency playing messenger</span>
+                  <span className="text-gray-700">Elimination of agency intermediaries</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900" />
-                  <span className="text-gray-700">Actual direct communication</span>
+                  <span className="text-gray-700">Direct, transparent communication</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900" />
-                  <span className="text-gray-700">You know exactly what you're paying (or not paying)</span>
+                  <span className="text-gray-700">Clear, predictable pricing structure</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900" />
-                  <span className="text-gray-700">Everything happens faster</span>
+                  <span className="text-gray-700">Accelerated recruitment timelines</span>
                 </div>
               </div>
             </div>
@@ -111,23 +111,23 @@ export default function HowItWorksPage() {
         {/* For Schools Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            How Schools Hire With Us
+            The Institution Recruitment Process
           </h2>
           <div className="space-y-6">
             {[
-              { num: 1, title: "Sign Up (Free)", desc: "Create your account. Takes about 2 minutes. Add your school details.", list: null },
-              { num: 2, title: "Find People", desc: null, list: [
-                { strong: "Post Your Jobs:", text: "Stick up your open roles and let our network apply" },
-                { strong: "Browse Profiles:", text: "Search by location, role, qualifications, experience – whatever matters" }
+              { num: 1, title: "Institution Registration", desc: "Establish your institutional account. Complete brief verification procedures and access our platform immediately.", list: null },
+              { num: 2, title: "Candidate Discovery", desc: "Two complementary approaches to candidate sourcing:", list: [
+                { strong: "Post Permanent Vacancies:", text: "Publish detailed job descriptions for our professional network to review and apply" },
+                { strong: "Database Search:", text: "Browse professional profiles filtered by location, qualifications, experience, and specialization" }
               ]},
-              { num: 3, title: "Connect", desc: null, list: [
-                { text: "Check out applications from interested people" },
-                { text: "Browse profiles and message anyone who looks good" },
-                { text: "Chat directly on our platform" },
-                { text: "Book interviews whenever suits you" }
+              { num: 3, title: "Candidate Review & Engagement", desc: null, list: [
+                { text: "Evaluate applications from interested professionals" },
+                { text: "Review profiles and request interviews with qualified candidates" },
+                { text: "Utilize our secure messaging system for direct communication" },
+                { text: "Schedule interviews at mutually convenient times" }
               ]},
-              { num: 4, title: "Interview", desc: "Meet them properly (in person or on video). Talk about the role, see if they're a good fit. No pressure from us.", list: null },
-              { num: 5, title: "Hire", desc: "Found the right person? Great! Pay our one-time flat fee. We'll help with compliance paperwork and they can start.", list: null }
+              { num: 4, title: "Candidate Assessment", desc: "Conduct comprehensive interviews in person or virtually. Evaluate candidate suitability, assess cultural fit, and make informed hiring decisions.", list: null },
+              { num: 5, title: "Placement Completion", desc: "Select your ideal candidate and finalize the placement. Process our one-time flat fee and receive compliance documentation support. Your new hire begins their position.", list: null }
             ].map((step, index) => (
               <AnimatedSection key={index} animation="fade-in-up" delay={index * 100}>
                 <FloatingCard delay={index * 100}>
@@ -156,7 +156,7 @@ export default function HowItWorksPage() {
           </div>
           <Card className="p-6 mt-6 bg-primary-50 border-primary-200">
             <p className="text-gray-700">
-              <strong>Zero Cost Until You Hire</strong> - Everything's free until you actually make a hire. Browse all day, message everyone, book a million interviews – doesn't cost a thing until you find the one.
+              <strong>Zero Investment Until Placement</strong> - Browse unlimited profiles, post unlimited vacancies, communicate with candidates, and conduct interviews at no cost. Investment occurs only upon successful placement.
             </p>
           </Card>
         </section>
@@ -165,31 +165,31 @@ export default function HowItWorksPage() {
         <section className="mb-12">
           <AnimatedSection animation="fade-in">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              How to Find Your Next Role
+              The Professional Career Path
             </h2>
           </AnimatedSection>
           <div className="space-y-6">
             {[
-              { num: 1, title: "Make Your Profile", desc: "Sign up for free. Add your details:", list: [
-                { text: "What you do now" },
-                { text: "Your qualifications" },
-                { text: "How long you've been doing this" },
-                { text: "What you're really good at" },
-                { text: "A bit about who you are" },
-                { text: "Your CV and compliance stuff" }
+              { num: 1, title: "Professional Profile Creation", desc: "Register at no cost. Develop your comprehensive profile:", list: [
+                { text: "Current role and professional title" },
+                { text: "Qualifications and professional certifications" },
+                { text: "Years of experience and career progression" },
+                { text: "Subject specializations and expertise areas" },
+                { text: "Professional biography and unique value proposition" },
+                { text: "CV and compliance documentation" }
               ]},
-              { num: 2, title: "Get Discovered or Start Looking", desc: "Two ways to land your next gig:", list: [
-                { strong: "Be Found:", text: "Schools browse profiles and message you" },
-                { strong: "Hunt Yourself:", text: "Browse open roles and apply to ones you like" }
+              { num: 2, title: "Opportunity Discovery", desc: "Two approaches to position sourcing:", list: [
+                { strong: "Professional Discovery:", text: "Institutions browse profiles and initiate contact" },
+                { strong: "Active Application:", text: "Browse posted vacancies and apply to suitable positions" }
               ]},
-              { num: 3, title: "Connect with Schools", desc: null, list: [
-                { text: "Get meeting requests from schools" },
-                { text: "Apply to roles that look good" },
-                { text: "Message schools with questions" },
-                { text: "Book interviews that work for your schedule" }
+              { num: 3, title: "Institution Engagement", desc: null, list: [
+                { text: "Receive interview requests from interested institutions" },
+                { text: "Apply to positions matching your qualifications and career objectives" },
+                { text: "Communicate directly with institutions regarding opportunities" },
+                { text: "Schedule interviews accommodating your availability" }
               ]},
-              { num: 4, title: "Interview & Chat Terms", desc: "Meet the school. Talk about the role, the school, what you want. No agency taking a chunk of your salary.", list: null },
-              { num: 5, title: "Say Yes", desc: "Love it? Accept the offer and start your new job. Easy.", list: null }
+              { num: 4, title: "Interview & Evaluation", desc: "Meet with institutions to discuss roles, responsibilities, and terms. Evaluate opportunities based on your career objectives without agency influence.", list: null },
+              { num: 5, title: "Position Acceptance", desc: "Accept your ideal position and commence your new role. Straightforward, professional, efficient.", list: null }
             ].map((step, index) => (
               <AnimatedSection key={index} animation="fade-in-up" delay={index * 100}>
                 <FloatingCard delay={index * 100}>
@@ -218,7 +218,7 @@ export default function HowItWorksPage() {
           </div>
           <Card className="p-6 mt-6 bg-green-50 border-green-200">
             <p className="text-gray-700">
-              <strong>Always Free for You</strong> - Making a profile, applying to jobs, connecting with schools – never costs you anything. Not now, not ever.
+              <strong>Permanent Free Access</strong> - Profile creation, position applications, and institution communication remain free indefinitely. No costs, no hidden fees, no charges to professionals.
             </p>
           </Card>
         </section>
@@ -226,69 +226,69 @@ export default function HowItWorksPage() {
         {/* Benefits Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Why This Actually Works Better
+            Platform Advantages
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-4">For Schools:</h3>
+              <h3 className="text-lg font-semibold mb-4">For Educational Institutions:</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                  <span>One Flat Fee: Same price whether you're hiring a Head or a cleaner</span>
+                  <span>Flat-Fee Structure: Consistent pricing regardless of position or salary</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                  <span>No Waiting: Stop waiting for agencies to "look into it"</span>
+                  <span>Immediate Access: No delays waiting for agency candidate sourcing</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                  <span>More People: Our whole database is yours to browse</span>
+                  <span>Comprehensive Database: Access our complete professional network</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                  <span>You're in Control: Hire on your timeline, your way</span>
+                  <span>Full Control: Recruitment proceeds at your pace, following your protocols</span>
                 </li>
               </ul>
             </Card>
             <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-4">For Staff:</h3>
+              <h3 className="text-lg font-semibold mb-4">For Education Professionals:</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                  <span>Never Pay: Finding jobs is free. Always.</span>
+                  <span>Permanent Free Access: Never pay to advance your career</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                  <span>Direct Line: Talk to schools directly, no playing telephone</span>
+                  <span>Direct Communication: Engage institutions directly, eliminating intermediaries</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                  <span>See Everything: Know what you're getting into before you apply</span>
+                  <span>Complete Transparency: View institutional details, roles, and expectations clearly</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                  <span>More Options: Schools find you AND you find them</span>
+                  <span>Enhanced Opportunities: Be discovered by institutions AND actively apply to positions</span>
                 </li>
               </ul>
             </Card>
             <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-4">For Everyone:</h3>
+              <h3 className="text-lg font-semibold mb-4">For All Users:</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                  <span>Faster: Direct chat means quicker decisions</span>
+                  <span>Accelerated Process: Direct communication expedites recruitment</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                  <span>Better Matches: More info = better choices</span>
+                  <span>Superior Matching: Comprehensive information enables better decisions</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                  <span>No Surprises: What you see is what you get</span>
+                  <span>Transparent Costs: Complete pricing clarity for all parties</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                  <span>Modern Platform: Works on your phone, easy to use</span>
+                  <span>Modern Platform: User-friendly interface, mobile-optimized experience</span>
                 </li>
               </ul>
             </Card>
@@ -299,28 +299,28 @@ export default function HowItWorksPage() {
         <section className="mb-12">
           <Card className="p-8 bg-gray-50">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              What It Actually Costs
+              Clear, Transparent Pricing
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold mb-4">For Schools:</h3>
+                <h3 className="text-xl font-semibold mb-4">For Educational Institutions:</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>✓ Free to sign up</li>
-                  <li>✓ Free to post unlimited jobs</li>
-                  <li>✓ Free to browse everyone</li>
-                  <li>✓ Free to message and interview</li>
-                  <li className="font-semibold text-gray-900 mt-4">£[Amount] flat fee per hire*</li>
+                  <li>✓ Free institution registration</li>
+                  <li>✓ Free unlimited vacancy postings</li>
+                  <li>✓ Free unlimited professional profile access</li>
+                  <li>✓ Free unlimited messaging and interview scheduling</li>
+                  <li className="font-semibold text-gray-900 mt-4">£[Amount] flat fee per successful placement*</li>
                 </ul>
                 <p className="text-sm text-gray-600 mt-2">
-                  *One payment per hire. Doesn't matter what role or what salary.
+                  *Single fee applicable to all positions regardless of salary level
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-4">For Staff:</h3>
+                <h3 className="text-xl font-semibold mb-4">For Education Professionals:</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li className="text-2xl font-bold text-gray-900">£0. Forever.</li>
-                  <li>Seriously, it's free</li>
-                  <li>We never charge teachers</li>
+                  <li className="text-2xl font-bold text-gray-900">£0 - Permanent Free Access</li>
+                  <li>No hidden costs or charges</li>
+                  <li>No fees, ever</li>
                 </ul>
               </div>
             </div>
@@ -331,18 +331,18 @@ export default function HowItWorksPage() {
         <section className="text-center">
           <Card className="p-8 bg-gray-50">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Fancy Giving It a Go?
+              Ready to Transform Your Recruitment Experience?
             </h2>
             <p className="text-gray-600 mb-6">
-              Join the smarter way to hire and get hired in education.
+              Join the modern approach to education recruitment.
             </p>
             <div className="flex gap-4 justify-center flex-wrap mb-6">
               <Link href="/signup">
-                <Button size="lg">Sign Up as a School</Button>
+                <Button size="lg">Register as Institution</Button>
               </Link>
               <Link href="/signup">
                 <Button size="lg" variant="outline">
-                  Sign Up as Staff
+                  Register as Professional
                 </Button>
               </Link>
             </div>
@@ -350,11 +350,11 @@ export default function HowItWorksPage() {
               <p className="mb-2">Questions?</p>
               <div className="flex gap-4 justify-center">
                 <Link href="/contact" className="text-gray-900 hover:underline">
-                  Get in Touch
+                  Contact Us
                 </Link>
                 <span>|</span>
                 <Link href="/faq" className="text-gray-900 hover:underline">
-                  FAQs
+                  Frequently Asked Questions
                 </Link>
               </div>
             </div>

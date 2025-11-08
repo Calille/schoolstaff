@@ -29,23 +29,22 @@ export default async function ForSchoolsPage() {
         <div className="text-center mb-12">
           <AnimatedSection animation="fade-in-down">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Hire Amazing Staff{' '}
-              <AnimatedGradientText>Without the Headache</AnimatedGradientText>
+              Efficient Permanent Recruitment for Educational Institutions
             </h1>
           </AnimatedSection>
           <AnimatedSection animation="fade-in-up" delay={200}>
             <p className="text-xl text-gray-600 mb-8">
-              Get instant access to our database of qualified education professionals across the UK. Every role covered, one flat fee, zero faff.
+              Access our comprehensive database of verified education professionals. From senior leadership to support staff, find qualified candidates with our transparent flat-fee recruitment platform.
             </p>
           </AnimatedSection>
           <AnimatedSection animation="fade-in-up" delay={400}>
             <div className="flex gap-4 justify-center flex-wrap">
               <Link href="/dashboard/school/staff">
-                <Button size="lg">Browse Staff Now</Button>
+                <Button size="lg">Explore Candidates</Button>
               </Link>
               <Link href="/how-it-works">
                 <Button size="lg" variant="outline">
-                  See How It Works
+                  View Pricing
                 </Button>
               </Link>
             </div>
@@ -55,42 +54,39 @@ export default async function ForSchoolsPage() {
         {/* Main Benefits Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Here's Why Schools Love Us
+            Advantages for Educational Institutions
           </h2>
           <div className="space-y-6">
             <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">One Flat Fee. Seriously.</h3>
+              <h3 className="text-xl font-semibold mb-3">Predictable Recruitment Costs</h3>
               <p className="text-gray-600">
-                No percentage nonsense. Whether you're hiring a Head Teacher or a lunchtime supervisor, it's the same flat fee. Simple maths, simple budgeting.
+                Our flat-fee structure provides complete cost transparency. Budget confidently with a single competitive fee per placement, regardless of salary level or position type.
               </p>
             </Card>
             <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">We've Got Everyone</h3>
+              <h3 className="text-xl font-semibold mb-3">Complete Role Coverage</h3>
               <div className="text-gray-600 space-y-1">
                 <ul className="list-disc list-inside space-y-1">
-                  <li>Head Teachers & Senior Leadership</li>
-                  <li>All Your Classroom Teachers</li>
-                  <li>Teaching Assistants & Support Staff</li>
-                  <li>SEN Specialists</li>
-                  <li>Cover Supervisors</li>
-                  <li>Admin Team</li>
-                  <li>Site Staff & Caretakers</li>
-                  <li>Lunchtime Crew</li>
-                  <li>Cleaning Staff</li>
-                  <li>Literally everyone else</li>
+                  <li>Senior Leadership & Head Teachers</li>
+                  <li>Qualified Teachers (Primary & Secondary)</li>
+                  <li>Teaching Assistants & Learning Support</li>
+                  <li>Special Educational Needs Specialists</li>
+                  <li>Administrative & Business Management</li>
+                  <li>Facilities & Operations Staff</li>
+                  <li>Support & Ancillary Personnel</li>
                 </ul>
               </div>
             </Card>
             <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Direct Access to Real People</h3>
+              <h3 className="text-xl font-semibold mb-3">Direct Candidate Engagement</h3>
               <p className="text-gray-600">
-                See full profiles with actual experience, qualifications, and what makes them tick. Then message them directly. No 'we'll send some CVs over' rubbish.
+                Review comprehensive professional profiles including qualifications, experience, and specializations. Schedule interviews directly and communicate without intermediary delays.
               </p>
             </Card>
             <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Browse for Free, Pay When You Hire</h3>
+              <h3 className="text-xl font-semibold mb-3">Zero Cost Until Placement</h3>
               <p className="text-gray-600">
-                Create your account, post unlimited roles, scroll through profiles, book meetings – all free. You only pay when you've found the one and want to hire them.
+                Register your institution, post unlimited vacancies, review candidates, and conduct interviews at no charge. Investment occurs only upon successful placement.
               </p>
             </Card>
           </div>
@@ -99,7 +95,7 @@ export default async function ForSchoolsPage() {
         {/* How It Works Section */}
         <section className="mb-12 bg-gray-50 p-8 rounded-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Your New Favourite Way to Hire
+            Your Recruitment Journey
           </h2>
           <div className="space-y-6">
             <AnimatedSection animation="fade-in-up" delay={0}>
@@ -109,9 +105,9 @@ export default async function ForSchoolsPage() {
                     1
                   </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Sign Up (It's Free)</h3>
+                  <h3 className="text-xl font-semibold mb-2">Institution Registration</h3>
                   <p className="text-gray-600">
-                    Quick as you like. Pop in your school details and you're good to go.
+                    Complete our brief registration process. Verify your institution credentials and gain immediate platform access.
                   </p>
                 </div>
               </div>
@@ -124,11 +120,11 @@ export default async function ForSchoolsPage() {
                     2
                   </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Post Roles or Browse Away</h3>
+                  <h3 className="text-xl font-semibold mb-2">Post Vacancies or Search Database</h3>
                   <ul className="text-gray-600 list-disc list-inside space-y-1">
-                    <li>Stick up your open positions for staff to apply</li>
-                    <li>Search our database by location, role, experience – whatever you need</li>
-                    <li>Check out detailed profiles with CVs and all the good stuff</li>
+                    <li>Publish detailed job descriptions for qualified professionals to review</li>
+                    <li>Search our database by location, qualifications, experience, and specialization</li>
+                    <li>Review comprehensive profiles with CVs, certifications, and references</li>
                   </ul>
                 </div>
               </div>
@@ -141,12 +137,12 @@ export default async function ForSchoolsPage() {
                     3
                   </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Chat & Meet</h3>
+                  <h3 className="text-xl font-semibold mb-2">Candidate Engagement</h3>
                   <ul className="text-gray-600 list-disc list-inside space-y-1">
-                    <li>Send meeting requests to people you like the look of</li>
-                    <li>Get applications from interested candidates</li>
-                    <li>Message them directly (no playing telephone with agencies)</li>
-                    <li>Book interviews when it suits you</li>
+                    <li>Request interviews with qualified candidates</li>
+                    <li>Receive applications from interested professionals</li>
+                    <li>Communicate directly through our secure messaging system</li>
+                    <li>Schedule interviews at your convenience</li>
                   </ul>
                 </div>
               </div>
@@ -159,9 +155,9 @@ export default async function ForSchoolsPage() {
                     4
                   </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Hire Your Star Player</h3>
+                  <h3 className="text-xl font-semibold mb-2">Complete Your Placement</h3>
                   <p className="text-gray-600">
-                    Found someone brilliant? Lovely! Pay our flat fee and they're all yours. We'll sort the paperwork.
+                    Select your ideal candidate and finalize the placement. Process our flat fee and receive compliance documentation support.
                   </p>
                 </div>
               </div>
@@ -169,8 +165,8 @@ export default async function ForSchoolsPage() {
             </AnimatedSection>
           </div>
           <div className="text-center mt-8">
-            <Link href="/dashboard/school/staff">
-              <Button size="lg">Start Browsing</Button>
+            <Link href="/signup">
+              <Button size="lg">Register Your Institution</Button>
             </Link>
           </div>
         </section>
@@ -178,18 +174,18 @@ export default async function ForSchoolsPage() {
         {/* Staff Database Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Meet Some of Our Crew
+            Our Professional Network
           </h2>
           <div className="mb-6">
             <StaffCountTeaser />
           </div>
           <p className="text-center text-gray-600 mb-6">
-            Right now we've got verified education professionals ready to join your team.
+            Access our network of verified education professionals actively seeking permanent positions.
           </p>
           {!session && (
             <div className="text-center">
               <Link href="/signup">
-                <Button size="lg">Sign Up to See Everyone</Button>
+                <Button size="lg">Register to View All Candidates</Button>
               </Link>
             </div>
           )}
@@ -209,25 +205,26 @@ export default async function ForSchoolsPage() {
         <section className="mb-12">
           <Card className="p-8 bg-primary-50 border-primary-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-              No Hidden Costs. Promise.
+              Transparent Pricing Structure
             </h2>
             <div className="text-center mb-6">
               <p className="text-3xl font-bold text-gray-900 mb-2">
-                Flat Fee Per Hire: £[Amount]*
+                Flat Fee Per Placement: £[Amount]*
               </p>
               <ul className="text-gray-700 space-y-2 mt-4">
-                <li>✓ No commission on salaries (ever)</li>
-                <li>✓ No sneaky extra charges</li>
-                <li>✓ No ongoing subscription</li>
-                <li>✓ Browse and message unlimited</li>
+                <li>✓ No salary-based commission</li>
+                <li>✓ No hidden charges or additional fees</li>
+                <li>✓ No ongoing subscription costs</li>
+                <li>✓ Unlimited candidate browsing</li>
+                <li>✓ Unlimited interview scheduling</li>
               </ul>
               <p className="text-sm text-gray-600 mt-4">
-                *One-time payment per hire. Head Teacher or cleaner – same price.
+                *Single payment per successful placement, applicable to all positions and salary levels.
               </p>
             </div>
             <div className="text-center">
               <Link href="/signup">
-                <Button size="lg">Get Started Free</Button>
+                <Button size="lg">Register Free</Button>
               </Link>
             </div>
           </Card>
@@ -237,18 +234,18 @@ export default async function ForSchoolsPage() {
         <section className="text-center">
           <Card className="p-8 bg-gray-50">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Let's Find Your Next Superstar
+              Begin Recruiting Exceptional Talent
             </h2>
             <p className="text-gray-600 mb-6">
-              Join schools across the UK who've ditched the agencies and started hiring smarter.
+              Join educational institutions across the UK benefiting from efficient, cost-effective permanent recruitment.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Link href="/signup">
-                <Button size="lg">Create Your Account</Button>
+                <Button size="lg">Register Your Institution</Button>
               </Link>
               <Link href="/how-it-works">
                 <Button size="lg" variant="outline">
-                  Book a Quick Demo
+                  Schedule Consultation
                 </Button>
               </Link>
             </div>
