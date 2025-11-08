@@ -142,7 +142,7 @@ export default function HowItWorksPage() {
                         <ul className="text-gray-600 list-disc list-inside space-y-1">
                           {step.list.map((item, i) => (
                             <li key={i}>
-                              {item.strong && <strong>{item.strong} </strong>}
+                              {'strong' in item && item.strong && <strong>{item.strong} </strong>}
                               {item.text}
                             </li>
                           ))}
@@ -204,7 +204,7 @@ export default function HowItWorksPage() {
                         <ul className="text-gray-600 list-disc list-inside space-y-1">
                           {step.list.map((item, i) => (
                             <li key={i}>
-                              {item.strong && <strong>{item.strong} </strong>}
+                              {'strong' in item && item.strong && <strong>{item.strong} </strong>}
                               {item.text}
                             </li>
                           ))}
