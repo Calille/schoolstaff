@@ -98,10 +98,10 @@ export function Navbar() {
                 <Link
                   href="/for-schools"
                   className={cn(
-                    'text-sm font-medium transition-colors',
+                    'px-3 py-2 rounded-lg font-medium transition-all duration-300',
                     isActive('/for-schools')
-                      ? 'text-gray-900 font-semibold'
-                      : 'text-gray-700 hover:text-gray-900'
+                      ? 'bg-primary-500 text-white shadow-md'
+                      : 'text-gray-700 hover:bg-primary-50 hover:text-primary-600'
                   )}
                 >
                   For Schools
@@ -109,10 +109,10 @@ export function Navbar() {
                 <Link
                   href="/for-staff"
                   className={cn(
-                    'text-sm font-medium transition-colors',
+                    'px-3 py-2 rounded-lg font-medium transition-all duration-300',
                     isActive('/for-staff')
-                      ? 'text-gray-900 font-semibold'
-                      : 'text-gray-700 hover:text-gray-900'
+                      ? 'bg-primary-500 text-white shadow-md'
+                      : 'text-gray-700 hover:bg-primary-50 hover:text-primary-600'
                   )}
                 >
                   For Staff
@@ -120,10 +120,10 @@ export function Navbar() {
                 <Link
                   href="/how-it-works"
                   className={cn(
-                    'text-sm font-medium transition-colors',
+                    'px-3 py-2 rounded-lg font-medium transition-all duration-300',
                     isActive('/how-it-works')
-                      ? 'text-gray-900 font-semibold'
-                      : 'text-gray-700 hover:text-gray-900'
+                      ? 'bg-primary-500 text-white shadow-md'
+                      : 'text-gray-700 hover:bg-primary-50 hover:text-primary-600'
                   )}
                 >
                   How It Works
@@ -219,10 +219,10 @@ export function Navbar() {
                 <Link
                   href="/for-schools"
                   className={cn(
-                    'block text-sm font-medium transition-colors',
+                    'block px-3 py-2 rounded-lg font-medium transition-all duration-300',
                     isActive('/for-schools')
-                      ? 'text-gray-900 font-semibold'
-                      : 'text-gray-700 hover:text-gray-900'
+                      ? 'bg-primary-500 text-white shadow-md'
+                      : 'text-gray-700 hover:bg-primary-50 hover:text-primary-600'
                   )}
                   onClick={() => setIsOpen(false)}
                 >
@@ -231,10 +231,10 @@ export function Navbar() {
                 <Link
                   href="/for-staff"
                   className={cn(
-                    'block text-sm font-medium transition-colors',
+                    'block px-3 py-2 rounded-lg font-medium transition-all duration-300',
                     isActive('/for-staff')
-                      ? 'text-gray-900 font-semibold'
-                      : 'text-gray-700 hover:text-gray-900'
+                      ? 'bg-primary-500 text-white shadow-md'
+                      : 'text-gray-700 hover:bg-primary-50 hover:text-primary-600'
                   )}
                   onClick={() => setIsOpen(false)}
                 >
@@ -243,10 +243,10 @@ export function Navbar() {
                 <Link
                   href="/how-it-works"
                   className={cn(
-                    'block text-sm font-medium transition-colors',
+                    'block px-3 py-2 rounded-lg font-medium transition-all duration-300',
                     isActive('/how-it-works')
-                      ? 'text-gray-900 font-semibold'
-                      : 'text-gray-700 hover:text-gray-900'
+                      ? 'bg-primary-500 text-white shadow-md'
+                      : 'text-gray-700 hover:bg-primary-50 hover:text-primary-600'
                   )}
                   onClick={() => setIsOpen(false)}
                 >

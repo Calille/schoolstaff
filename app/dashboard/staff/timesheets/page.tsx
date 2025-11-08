@@ -49,7 +49,7 @@ export default async function StaffTimesheetsPage() {
       submitted: 'bg-gray-500',
       approved_by_school: 'bg-green-600',
       rejected: 'bg-red-600',
-      processed_for_payroll: 'bg-blue-600',
+      processed_for_payroll: 'bg-primary-600',
     }
 
     return (

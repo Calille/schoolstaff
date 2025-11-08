@@ -276,7 +276,7 @@ export default function AdminInvoicingPage() {
                             href={`https://dashboard.stripe.com/invoices/${invoice.stripe_invoice_id}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-sm text-blue-600 hover:underline ml-2"
+                            className="text-sm text-primary-600 hover:underline ml-2"
                           >
                             View in Stripe
                           </a>

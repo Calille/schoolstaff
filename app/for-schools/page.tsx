@@ -6,6 +6,9 @@ import { createClient } from '@/lib/supabase/server'
 import { StaffCountTeaser } from '@/components/staff-count-teaser'
 import { trackPageView } from '@/lib/analytics'
 import { SchoolStaffList } from '@/components/school-staff-list'
+import { AnimatedSection } from '@/components/animated-section'
+import { AnimatedGradientText } from '@/components/animated-gradient-text'
+import { FloatingCard } from '@/components/floating-card'
 
 /**
  * For Schools Page
@@ -24,22 +27,29 @@ export default async function ForSchoolsPage() {
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Hire Amazing Staff Without the Headache
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Get instant access to our database of qualified education professionals across the UK. Every role covered, one flat fee, zero faff.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/dashboard/school/staff">
-              <Button size="lg">Browse Staff Now</Button>
-            </Link>
-            <Link href="/how-it-works">
-              <Button size="lg" variant="outline">
-                See How It Works
-              </Button>
-            </Link>
-          </div>
+          <AnimatedSection animation="fade-in-down">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Hire Amazing Staff{' '}
+              <AnimatedGradientText>Without the Headache</AnimatedGradientText>
+            </h1>
+          </AnimatedSection>
+          <AnimatedSection animation="fade-in-up" delay={200}>
+            <p className="text-xl text-gray-600 mb-8">
+              Get instant access to our database of qualified education professionals across the UK. Every role covered, one flat fee, zero faff.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection animation="fade-in-up" delay={400}>
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Link href="/dashboard/school/staff">
+                <Button size="lg">Browse Staff Now</Button>
+              </Link>
+              <Link href="/how-it-works">
+                <Button size="lg" variant="outline">
+                  See How It Works
+                </Button>
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
 
         {/* Main Benefits Section */}
@@ -92,11 +102,12 @@ export default async function ForSchoolsPage() {
             Your New Favourite Way to Hire
           </h2>
           <div className="space-y-6">
-            <Card className="p-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  1
-                </div>
+            <AnimatedSection animation="fade-in-up" delay={0}>
+              <FloatingCard delay={0}>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    1
+                  </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Sign Up (It's Free)</h3>
                   <p className="text-gray-600">
@@ -104,12 +115,14 @@ export default async function ForSchoolsPage() {
                   </p>
                 </div>
               </div>
-            </Card>
-            <Card className="p-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  2
-                </div>
+              </FloatingCard>
+            </AnimatedSection>
+            <AnimatedSection animation="fade-in-up" delay={200}>
+              <FloatingCard delay={200}>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    2
+                  </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Post Roles or Browse Away</h3>
                   <ul className="text-gray-600 list-disc list-inside space-y-1">
@@ -119,12 +132,14 @@ export default async function ForSchoolsPage() {
                   </ul>
                 </div>
               </div>
-            </Card>
-            <Card className="p-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  3
-                </div>
+              </FloatingCard>
+            </AnimatedSection>
+            <AnimatedSection animation="fade-in-up" delay={400}>
+              <FloatingCard delay={400}>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    3
+                  </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Chat & Meet</h3>
                   <ul className="text-gray-600 list-disc list-inside space-y-1">
@@ -135,12 +150,14 @@ export default async function ForSchoolsPage() {
                   </ul>
                 </div>
               </div>
-            </Card>
-            <Card className="p-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  4
-                </div>
+              </FloatingCard>
+            </AnimatedSection>
+            <AnimatedSection animation="fade-in-up" delay={600}>
+              <FloatingCard delay={600}>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    4
+                  </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Hire Your Star Player</h3>
                   <p className="text-gray-600">
@@ -148,7 +165,8 @@ export default async function ForSchoolsPage() {
                   </p>
                 </div>
               </div>
-            </Card>
+              </FloatingCard>
+            </AnimatedSection>
           </div>
           <div className="text-center mt-8">
             <Link href="/dashboard/school/staff">
@@ -189,7 +207,7 @@ export default async function ForSchoolsPage() {
 
         {/* Pricing Section */}
         <section className="mb-12">
-          <Card className="p-8 bg-blue-50 border-blue-200">
+          <Card className="p-8 bg-primary-50 border-primary-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
               No Hidden Costs. Promise.
             </h2>

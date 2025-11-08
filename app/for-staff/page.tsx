@@ -5,6 +5,9 @@ import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import { SchoolCountTeaser } from '@/components/school-count-teaser'
 import { SchoolList } from '@/components/school-list'
+import { AnimatedSection } from '@/components/animated-section'
+import { AnimatedGradientText } from '@/components/animated-gradient-text'
+import { FloatingCard } from '@/components/floating-card'
 
 /**
  * For Staff Page
@@ -23,22 +26,29 @@ export default async function ForStaffPage() {
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Your Next School Role is Waiting
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Join education professionals who are finding their perfect school matches with us. Build your profile, show off what you're good at, and connect directly with hiring schools.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/signup">
-              <Button size="lg">Create Your Profile</Button>
-            </Link>
-            <Link href="/dashboard/staff/requests">
-              <Button size="lg" variant="outline">
-                Browse School Roles
-              </Button>
-            </Link>
-          </div>
+          <AnimatedSection animation="fade-in-down">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Your Next School Role is{' '}
+              <AnimatedGradientText>Waiting</AnimatedGradientText>
+            </h1>
+          </AnimatedSection>
+          <AnimatedSection animation="fade-in-up" delay={200}>
+            <p className="text-xl text-gray-600 mb-8">
+              Join education professionals who are finding their perfect school matches with us. Build your profile, show off what you're good at, and connect directly with hiring schools.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection animation="fade-in-up" delay={400}>
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Link href="/signup">
+                <Button size="lg">Create Your Profile</Button>
+              </Link>
+              <Link href="/dashboard/staff/requests">
+                <Button size="lg" variant="outline">
+                  Browse School Roles
+                </Button>
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
 
         {/* Main Benefits Section */}
@@ -86,11 +96,12 @@ export default async function ForStaffPage() {
             Four Dead Simple Steps
           </h2>
           <div className="space-y-6">
-            <Card className="p-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  1
-                </div>
+            <AnimatedSection animation="fade-in-up" delay={0}>
+              <FloatingCard delay={0}>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    1
+                  </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Create Your Profile (Free)</h3>
                   <p className="text-gray-600">
@@ -98,12 +109,14 @@ export default async function ForStaffPage() {
                   </p>
                 </div>
               </div>
-            </Card>
-            <Card className="p-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  2
-                </div>
+              </FloatingCard>
+            </AnimatedSection>
+            <AnimatedSection animation="fade-in-up" delay={200}>
+              <FloatingCard delay={200}>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    2
+                  </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Make Yourself Look Good</h3>
                   <ul className="text-gray-600 list-disc list-inside space-y-1">
@@ -115,12 +128,14 @@ export default async function ForStaffPage() {
                   </ul>
                 </div>
               </div>
-            </Card>
-            <Card className="p-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  3
-                </div>
+              </FloatingCard>
+            </AnimatedSection>
+            <AnimatedSection animation="fade-in-up" delay={400}>
+              <FloatingCard delay={400}>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    3
+                  </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Get Found or Go Looking</h3>
                   <ul className="text-gray-600 list-disc list-inside space-y-1">
@@ -131,12 +146,14 @@ export default async function ForStaffPage() {
                   </ul>
                 </div>
               </div>
-            </Card>
-            <Card className="p-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  4
-                </div>
+              </FloatingCard>
+            </AnimatedSection>
+            <AnimatedSection animation="fade-in-up" delay={600}>
+              <FloatingCard delay={600}>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    4
+                  </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Interview & Accept</h3>
                   <p className="text-gray-600">
@@ -144,7 +161,8 @@ export default async function ForStaffPage() {
                   </p>
                 </div>
               </div>
-            </Card>
+              </FloatingCard>
+            </AnimatedSection>
           </div>
           <div className="text-center mt-8">
             <Link href="/signup">

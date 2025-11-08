@@ -92,7 +92,7 @@ function DocumentUploadCard({
             href={doc.document_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-blue-600 hover:underline"
+            className="text-sm text-primary-600 hover:underline"
           >
             View uploaded document
           </a>
