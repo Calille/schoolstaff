@@ -25,8 +25,8 @@ export default function HowItWorks() {
   const schoolSteps = [
     {
       number: 'Step 1',
-      title: 'Institution Registration',
-      description: 'Establish your institutional account in under 5 minutes. Complete brief verification procedures and access our comprehensive platform immediately upon approval.',
+      title: 'School Registration',
+      description: 'Establish your school account in under 5 minutes. Complete brief verification procedures and access our comprehensive platform immediately upon approval.',
       icon: UserCheck,
     },
     {
@@ -38,7 +38,7 @@ export default function HowItWorks() {
     {
       number: 'Step 3',
       title: 'Candidate Review & Engagement',
-      description: 'Evaluate applications from interested professionals, review comprehensive profiles, and request interviews. Utilize our secure messaging system for direct, transparent communication.',
+      description: 'Evaluate applications from interested professionals, review comprehensive profiles, and request interviews. Utilise our secure messaging system for direct, transparent communication.',
       icon: MessageSquare,
     },
     {
@@ -59,25 +59,25 @@ export default function HowItWorks() {
     {
       number: 'Step 1',
       title: 'Professional Profile Creation',
-      description: 'Register at no cost and develop your comprehensive professional profile including current role, qualifications, experience, specializations, professional biography, and compliance documentation.',
+      description: 'Register at no cost and develop your comprehensive professional profile including current role, qualifications, experience, specialisations, professional biography, and compliance documentation.',
       icon: User,
     },
     {
       number: 'Step 2',
       title: 'Opportunity Discovery',
-      description: 'Two approaches to position sourcing: Be discovered by institutions browsing our database, or actively search and apply to posted vacancies matching your qualifications and career objectives.',
+      description: 'Two approaches to position sourcing: Be discovered by schools browsing our database, or actively search and apply to posted vacancies matching your qualifications and career objectives.',
       icon: Search,
     },
     {
       number: 'Step 3',
-      title: 'Institution Engagement',
-      description: 'Receive interview requests from interested institutions, apply to roles matching your skills, communicate directly regarding opportunities, and schedule interviews accommodating your availability.',
+      title: 'School Engagement',
+      description: 'Receive interview requests from interested schools, apply to roles matching your skills, communicate directly regarding opportunities, and schedule interviews accommodating your availability.',
       icon: MessageSquare,
     },
     {
       number: 'Step 4',
       title: 'Interview & Evaluation',
-      description: 'Meet with institutions to discuss roles, responsibilities, compensation, and terms. Evaluate opportunities based on your career objectives without agency influence or pressure.',
+      description: 'Meet with schools to discuss roles, responsibilities, compensation, and terms. Evaluate opportunities based on your career objectives without agency influence or pressure.',
       icon: Calendar,
     },
     {
@@ -101,7 +101,7 @@ export default function HowItWorks() {
           
           <ScrollReveal animation="fade-up" delay={200}>
             <p className="text-xl text-gray-600 mb-12">
-              School Staff provides a transparent, efficient permanent recruitment platform. Direct connections between educational institutions and qualified professionals, without traditional agency barriers.
+              School Staff provides a transparent, efficient permanent recruitment platform. Direct connections between schools and qualified professionals, without traditional agency barriers.
             </p>
           </ScrollReveal>
 
@@ -153,7 +153,7 @@ export default function HowItWorks() {
                 <div className="w-16 h-16 rounded-xl bg-white/20 flex items-center justify-center mb-6">
                   <School className="w-8 h-8" />
                 </div>
-                <h3 className="text-3xl font-bold mb-6">For Educational Institutions</h3>
+                <h3 className="text-3xl font-bold mb-6">For Schools</h3>
                 <ul className="space-y-4">
                   {[
                     'Post permanent vacancies for professional applications',
@@ -180,8 +180,8 @@ export default function HowItWorks() {
                 <ul className="space-y-4">
                   {[
                     'Develop comprehensive professional profiles',
-                    'Apply to institutional vacancies directly',
-                    'Be discovered by institutions seeking specific expertise',
+                    'Apply to school vacancies directly',
+                    'Be discovered by schools seeking specific expertise',
                     'Communicate directly with hiring decision-makers',
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
@@ -246,7 +246,7 @@ export default function HowItWorks() {
           {/* Process Steps */}
           {activeTab === 'schools' ? (
             <ProfessionalProcess
-              title="The Institution Recruitment Process"
+              title="The School Recruitment Process"
               steps={schoolSteps}
             />
           ) : (
@@ -350,7 +350,7 @@ export default function HowItWorks() {
                 </div>
                 <ul className="space-y-4 mb-8">
                   {[
-                    'Free institution registration',
+                    'Free school registration',
                     'Free unlimited vacancy postings',
                     'Free unlimited professional profile access',
                     'Free unlimited messaging and interview scheduling',
@@ -405,7 +405,7 @@ export default function HowItWorks() {
         title="Ready to Transform Your Recruitment Experience?"
         subtitle="Join the modern approach to education recruitment. Direct connections, transparent pricing, exceptional results."
         primaryButton={{
-          text: 'Register as Institution',
+          text: 'Register as School',
           href: '/signup?role=school',
         }}
         secondaryButton={{

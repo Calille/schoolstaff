@@ -86,9 +86,14 @@ export function AlternatingFeatureSection({
                       />
                     </div>
                   ) : (
-                    // Placeholder
-                    <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center shadow-2xl">
-                      <feature.icon className="w-24 h-24 text-primary-600" />
+                    // Improved placeholder - smaller icon, better design
+                    <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary-50 via-primary-100 to-primary-200 flex items-center justify-center shadow-2xl border-2 border-primary-200">
+                      <div className="text-center p-8">
+                        <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+                          <feature.icon className="w-10 h-10 text-primary-600" />
+                        </div>
+                        <p className="text-primary-700 font-semibold text-sm">Feature Visual</p>
+                      </div>
                     </div>
                   )}
                 </div>

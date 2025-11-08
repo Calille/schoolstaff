@@ -22,7 +22,7 @@ export default function Home() {
     {
       icon: DollarSign,
       title: 'Transparent Flat-Fee Pricing',
-      description: 'Our straightforward pricing model eliminates commission-based fees. One competitive flat fee per successful placement, regardless of salary level or position. Predictable costs, exceptional value for educational institutions nationwide.',
+      description: 'Our straightforward pricing model eliminates commission-based fees. One competitive flat fee per successful placement, regardless of salary level or position. Predictable costs, exceptional value for schools nationwide.',
     },
     {
       icon: Users,
@@ -37,7 +37,7 @@ export default function Home() {
     {
       icon: Shield,
       title: 'Rigorous Compliance Verification',
-      description: 'All professionals maintain current DBS checks, safeguarding certifications, and relevant qualifications. Our comprehensive verification process ensures full regulatory compliance and complete peace of mind for hiring institutions.',
+      description: 'All professionals maintain current DBS checks, safeguarding certifications, and relevant qualifications. Our comprehensive verification process ensures full regulatory compliance and complete peace of mind for hiring schools.',
     },
   ]
 
@@ -67,7 +67,7 @@ export default function Home() {
       {/* Asymmetric Hero */}
       <AsymmetricHero
         title="Permanent Recruitment Solutions for Education"
-        subtitle="School Staff is the UK's leading permanent recruitment platform connecting educational institutions with qualified professionals. Streamline your hiring process with our comprehensive database and transparent flat-fee structure."
+        subtitle="School Staff is the UK's leading permanent recruitment platform connecting schools with qualified professionals. Streamline your hiring process with our comprehensive database and transparent flat-fee structure."
         highlights={[
           'Flat-fee pricing with no hidden costs',
           'Direct access to 2,000+ verified professionals',
@@ -87,13 +87,13 @@ export default function Home() {
       {/* Alternating Features */}
       <AlternatingFeatureSection
         sectionTitle="Why Leading Schools Choose School Staff"
-        sectionSubtitle="Comprehensive recruitment solutions designed specifically for educational institutions"
+        sectionSubtitle="Comprehensive recruitment solutions designed specifically for schools"
         features={features}
       />
 
       {/* Stats with Dark Background */}
       <StatsDarkSection
-        title="Trusted by Educational Institutions Nationwide"
+        title="Trusted by Schools Nationwide"
         subtitle="Join hundreds of schools and thousands of professionals transforming education recruitment"
         stats={stats}
       />
@@ -129,7 +129,7 @@ export default function Home() {
       {/* Final CTA */}
       <ProfessionalCTASection
         title="Transform Your Recruitment Strategy"
-        subtitle="Join hundreds of educational institutions leveraging our platform for efficient, cost-effective permanent recruitment."
+        subtitle="Join hundreds of schools leveraging our platform for efficient, cost-effective permanent recruitment."
         primaryButton={{
           text: 'Get Started Today',
           href: '/signup',

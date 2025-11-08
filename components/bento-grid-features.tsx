@@ -54,7 +54,7 @@ export function BentoGridFeatures({ features, sectionTitle }: BentoGridFeaturesP
           </ScrollReveal>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[200px] gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[minmax(200px,auto)] gap-6">
           {features.map((feature, index) => (
             <ScrollReveal
               key={index}
@@ -65,7 +65,7 @@ export function BentoGridFeatures({ features, sectionTitle }: BentoGridFeaturesP
             >
               <div
                 className={`
-                  h-full p-8 rounded-3xl shadow-lg
+                  h-full min-h-[200px] p-6 md:p-8 rounded-3xl shadow-lg
                   transform hover:scale-105 hover:shadow-2xl
                   transition-all duration-300
                   flex flex-col justify-between
@@ -74,15 +74,15 @@ export function BentoGridFeatures({ features, sectionTitle }: BentoGridFeaturesP
               >
                 <div>
                   <div className={`
-                    inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4
+                    inline-flex items-center justify-center w-12 h-12 rounded-xl mb-4
                     ${feature.variant === 'secondary' ? 'bg-primary-100 text-primary-600' : 'bg-white/20 text-current'}
                   `}>
-                    <feature.icon className="w-7 h-7" />
+                    <feature.icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">{feature.title}</h3>
                 </div>
                 <p className={`
-                  text-base leading-relaxed
+                  text-sm md:text-base leading-relaxed
                   ${feature.variant === 'primary' ? 'text-white/90' : 'text-gray-600'}
                 `}>
                   {feature.description}

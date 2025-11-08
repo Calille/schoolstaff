@@ -22,7 +22,7 @@ export function ProfilePreviewShowcase() {
               Your Professional Profile
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Create a comprehensive profile that showcases your expertise and attracts hiring institutions
+              Create a comprehensive profile that showcases your expertise and attracts hiring schools
             </p>
           </div>
         </ScrollReveal>

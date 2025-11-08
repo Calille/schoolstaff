@@ -22,31 +22,31 @@ export default function ForStaff() {
     {
       icon: User,
       title: 'Professional Profile Showcase',
-      description: 'Develop a comprehensive profile highlighting your qualifications, experience, specializations, and unique value proposition. Enable institutions to discover your expertise.',
+      description: 'Develop a comprehensive profile highlighting your qualifications, experience, specialisations, and unique value proposition. Enable schools to discover your expertise.',
       variant: 'white' as const,
     },
     {
       icon: MessageSquare,
-      title: 'Direct Institution Access',
-      description: 'Eliminate agency intermediaries. Communicate directly with hiring institutions, schedule your own interviews, and negotiate terms transparently.',
+      title: 'Direct School Access',
+      description: 'Eliminate agency intermediaries. Communicate directly with hiring schools, schedule your own interviews, and negotiate terms transparently.',
       variant: 'white' as const,
     },
     {
       icon: Briefcase,
       title: 'Comprehensive Opportunity Access',
-      description: 'Whether you\'re seeking leadership positions, classroom teaching roles, learning support, or specialized positions, our platform serves all education career paths.',
+      description: 'Whether you\'re seeking leadership positions, classroom teaching roles, learning support, or specialised positions, our platform serves all education career paths.',
       variant: 'white' as const,
     },
     {
       icon: Search,
       title: 'Dual Application Approach',
-      description: 'Browse posted vacancies and submit applications while maintaining visibility to institutions searching our database. Maximize your exposure to opportunities.',
+      description: 'Browse posted vacancies and submit applications while maintaining visibility to schools searching our database. Maximise your exposure to opportunities.',
       variant: 'white' as const,
     },
     {
       icon: DollarSign,
       title: 'Permanent Access at No Cost',
-      description: 'Create your profile, apply to positions, and connect with institutions completely free. Our platform never charges education professionals.',
+      description: 'Create your profile, apply to positions, and connect with schools completely free. Our platform never charges education professionals.',
       variant: 'white' as const,
     },
   ]
@@ -85,7 +85,7 @@ export default function ForStaff() {
 
           <ScrollReveal animation="fade-up" delay={200}>
             <p className="text-xl md:text-2xl text-primary-100 mb-10 leading-relaxed">
-              Join 2,000+ education professionals utilizing School Staff to secure permanent positions. Create your professional profile, showcase your qualifications, and connect directly with hiring institutions.
+              Join 2,000+ education professionals utilising School Staff to secure permanent positions. Create your professional profile, showcase your qualifications, and connect directly with hiring schools.
             </p>
           </ScrollReveal>
 

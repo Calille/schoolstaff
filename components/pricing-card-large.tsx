@@ -9,8 +9,6 @@ interface PricingCardLargeProps {
   period?: string
   description: string
   features: string[]
-  comparisonTitle?: string
-  comparisonPrice?: string
   ctaText: string
   ctaHref: string
 }
@@ -20,8 +18,6 @@ export function PricingCardLarge({
   period = 'per placement',
   description,
   features,
-  comparisonTitle = 'Traditional Agency',
-  comparisonPrice = '15-25% of salary',
   ctaText,
   ctaHref,
 }: PricingCardLargeProps) {
@@ -36,14 +32,6 @@ export function PricingCardLarge({
 
         <ScrollReveal animation="zoom-in" delay={200}>
           <div className="bg-white rounded-3xl shadow-2xl border-2 border-primary-200 p-12">
-            {/* Comparison - Strikethrough */}
-            <div className="text-center mb-8 pb-8 border-b border-gray-200">
-              <div className="inline-block bg-red-50 rounded-lg px-6 py-3">
-                <p className="text-sm text-red-600 font-semibold mb-1">{comparisonTitle}</p>
-                <p className="text-3xl font-bold text-red-600 line-through">{comparisonPrice}</p>
-              </div>
-            </div>
-
             {/* Main Pricing */}
             <div className="text-center mb-10">
               <div className="inline-flex items-baseline gap-2 mb-4">

@@ -53,10 +53,10 @@ export function SchoolCarousel({ schools, totalCount, isLoggedIn = false }: Scho
         <ScrollReveal animation="fade-up">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Institutions Currently Recruiting
+              Schools Currently Recruiting
             </h2>
             <p className="text-xl text-gray-600">
-              <span className="text-primary-600 font-bold">{totalCount}</span> educational institutions actively hiring
+              <span className="text-primary-600 font-bold">{totalCount}</span> schools actively hiring
             </p>
           </div>
         </ScrollReveal>

@@ -60,8 +60,8 @@ export default function ForSchools() {
   const processSteps = [
     {
       number: 'Step 1',
-      title: 'Institution Registration',
-      description: 'Complete our brief registration process in under 5 minutes. Verify your institution credentials and gain immediate platform access to our comprehensive database.',
+      title: 'School Registration',
+      description: 'Complete our brief registration process in under 5 minutes. Verify your school credentials and gain immediate platform access to our comprehensive database.',
       icon: UserCheck,
     },
     {
@@ -88,7 +88,7 @@ export default function ForSchools() {
     <PageContainer className="!px-0 !py-0 min-h-screen">
       {/* Asymmetric Hero */}
       <AsymmetricHero
-        title="Efficient Permanent Recruitment for Educational Institutions"
+        title="Efficient Permanent Recruitment for Schools"
         subtitle="Access our comprehensive database of verified education professionals. From senior leadership to support staff, find qualified candidates with our transparent flat-fee recruitment platform."
         highlights={[
           'One flat fee covers all positions',
@@ -108,7 +108,7 @@ export default function ForSchools() {
 
       {/* Bento Grid Features */}
       <BentoGridFeatures
-        sectionTitle="Advantages for Educational Institutions"
+        sectionTitle="Advantages for Schools"
         features={bentoFeatures}
       />
 
@@ -135,9 +135,7 @@ export default function ForSchools() {
             'Compliance documentation support',
             'Dedicated account management',
           ]}
-          comparisonTitle="Traditional Agency Fee"
-          comparisonPrice="15-25% of salary (£6,000-£10,000)"
-          ctaText="Register Your Institution Free"
+          ctaText="Register Your School Free"
           ctaHref="/signup?role=school"
         />
       </div>
@@ -152,9 +150,9 @@ export default function ForSchools() {
       {/* Final CTA */}
       <ProfessionalCTASection
         title="Begin Recruiting Exceptional Talent"
-        subtitle="Join educational institutions across the UK benefiting from efficient, cost-effective permanent recruitment."
+        subtitle="Join schools across the UK benefiting from efficient, cost-effective permanent recruitment."
         primaryButton={{
-          text: 'Register Your Institution',
+          text: 'Register Your School',
           href: '/signup?role=school',
         }}
         secondaryButton={{

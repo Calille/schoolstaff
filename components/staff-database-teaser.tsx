@@ -79,7 +79,7 @@ export function StaffDatabaseTeaser({
                     Unlock Full Access
                   </h3>
                   <p className="text-lg text-gray-600 mb-8">
-                    Register your institution to view detailed profiles of all {totalCount}+ verified professionals
+                    Register your school to view detailed profiles of all {totalCount}+ verified professionals
                   </p>
                   <Link
                     href="/signup?role=school"

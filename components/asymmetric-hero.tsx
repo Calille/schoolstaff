@@ -42,9 +42,9 @@ export function AsymmetricHero({
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 py-16 w-full">
-        <div className="grid lg:grid-cols-5 gap-12 items-center">
-          {/* Left Content - 60% */}
-          <div className="lg:col-span-3">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+          {/* Left Content - 60% on desktop, full width on mobile */}
+          <div className="lg:col-span-3 order-2 lg:order-1">
             <ScrollReveal animation="fade-right" duration={600}>
               <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
                 {title}
@@ -74,7 +74,7 @@ export function AsymmetricHero({
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={primaryCTA.href}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-700 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-700 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group whitespace-nowrap"
                 >
                   {primaryCTA.text}
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -83,7 +83,7 @@ export function AsymmetricHero({
                 {secondaryCTA && (
                   <Link
                     href={secondaryCTA.href}
-                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-primary-700 transform hover:scale-105 transition-all duration-300"
+                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-primary-700 transform hover:scale-105 transition-all duration-300 whitespace-nowrap"
                   >
                     {secondaryCTA.text}
                   </Link>
@@ -92,9 +92,9 @@ export function AsymmetricHero({
             </ScrollReveal>
           </div>
 
-          {/* Right Image/Illustration - 40% */}
+          {/* Right Image/Illustration - 40% on desktop, full width on mobile, shows first on mobile */}
           {showIllustration && (
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 order-1 lg:order-2">
               <ScrollReveal animation="fade-left" delay={400} duration={800}>
                 <div className="relative">
                   {imageSrc ? (
@@ -107,19 +107,18 @@ export function AsymmetricHero({
                       />
                     </div>
                   ) : (
-                    // Placeholder illustration
-                    <div className="aspect-square rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/20 flex items-center justify-center p-8">
-                      <div className="text-center">
+                    // Improved placeholder illustration - no text to prevent cutoff
+                    <div className="aspect-square rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border-2 border-white/20 flex items-center justify-center p-12">
+                      <div className="text-center w-full">
                         <div className="w-32 h-32 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center">
                           <CheckCircle className="w-16 h-16 text-white" />
                         </div>
-                        <p className="text-xl font-semibold">Platform Preview</p>
                       </div>
                     </div>
                   )}
                   
-                  {/* Floating badge */}
-                  <div className="absolute -bottom-6 -left-6 bg-green-500 text-white px-6 py-3 rounded-full shadow-xl font-bold animate-bounce-subtle">
+                  {/* Floating badge - fixed positioning */}
+                  <div className="absolute -bottom-4 -left-4 bg-green-500 text-white px-5 py-2.5 rounded-full shadow-xl font-bold text-sm whitespace-nowrap">
                     100% Free for Staff
                   </div>
                 </div>
